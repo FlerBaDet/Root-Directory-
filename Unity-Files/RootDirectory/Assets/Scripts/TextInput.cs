@@ -19,6 +19,7 @@ public class TextInput : MonoBehaviour
 
     void AcceptStringInput(string userInput)
     {
+        //Debug.Log(userInput);
         userInput = userInput.ToLower();
         controller.LogStringWithReturn(userInput);
 
@@ -28,8 +29,9 @@ public class TextInput : MonoBehaviour
         for (int i = 0; i < controller.inputActions.Length; i++)
         {
             InputAction inputAction = controller.inputActions[i];
-            if (inputAction.keyWord == separatedInputWords[0])
+            if (inputAction.keyWord.ToLower() == separatedInputWords[0])//CD
             {
+                //Debug.Log(separatedInputWords[0]);
                 inputAction.RespondToInput(controller, separatedInputWords);
             }
         }
