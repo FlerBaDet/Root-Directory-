@@ -400,7 +400,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 3865845229108724843, guid: a20d62fd0031127449ee7132611cc887, type: 3}
-  testImage: {fileID: 21300000, guid: 70bceb6107bbc5946b26d5026e26e1ee, type: 3}
 --- !u!1 &1195456493
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,7 +759,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 0.5
-  m_Text: root/home
+  m_Text: root/
 --- !u!222 &1745836264
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -836,9 +835,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayText: {fileID: 1745836263}
+  imageDisplay: {fileID: 918007426}
   inputActions:
   - {fileID: 11400000, guid: 6bd54e8b4840c4a4bb999728864d85ca, type: 2}
   - {fileID: 11400000, guid: e7031feac5b6c6841a3a08ea06f93321, type: 2}
+  - {fileID: 11400000, guid: 5789fcf3d2921314298eb3cb3f87ca28, type: 2}
   osNav: {fileID: 0}
   interactionDescriptionsInDirectory: []
 --- !u!114 &1759094957
@@ -854,6 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDirectory: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
+  imageMoveRate: 8
 --- !u!114 &1759094958
 MonoBehaviour:
   m_ObjectHideFlags: 0

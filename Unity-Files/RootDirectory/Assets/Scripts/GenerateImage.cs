@@ -6,26 +6,25 @@ using UnityEngine.UI;
 public class GenerateImage : MonoBehaviour
 {
     public GameObject image;
-    public Sprite testImage;
-    Vector3 startPos;
+    Transform startPos;
 
     public void CreateImage(Sprite sprite)
     {
         GameObject newImage = Instantiate(image, transform);
-        newImage.transform.parent = transform;
+        newImage.transform.SetParent(transform, true);
+        newImage.transform.position = startPos.position;
         newImage.GetComponent<Image>().sprite = sprite;
+        Translate();
     }
 
     public void Translate()
     {
-        transform.position += new Vector3(0,24);
+        transform.position += new Vector3(0,4);
     }
 
     private void Start()
     {
-        startPos = transform.position;
-        CreateImage(testImage);
-        Translate();
+        startPos = transform;
     }
 
 }

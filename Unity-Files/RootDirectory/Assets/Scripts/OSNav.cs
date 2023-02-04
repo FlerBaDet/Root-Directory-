@@ -5,6 +5,7 @@ using UnityEngine;
 public class OSNav : MonoBehaviour
 {
     public Directory currentDirectory;
+    public int imageMoveRate = 8;
 
     Dictionary<string, Directory> pathDictionary = new Dictionary<string, Directory> ();
     OSController controller;
@@ -47,10 +48,27 @@ public class OSNav : MonoBehaviour
         {
             controller.LogStringWithReturn(currentDirectory.files[i].keyword);
         }
-        controller.LogStringWithReturn("");
+        //controller.LogStringWithReturn("");
         controller.DisplayDirectory();
         
     }
+
+    public void DisplayFile(string[] separatedInputWords)
+    {
+        foreach(File file in currentDirectory.files)
+        {
+            if (file.keyword.ToLower() == separatedInputWords[1].ToLower())
+            {
+                file.Open(controller);
+                if (file.type == "jpog")
+                {
+                    controller.LogStringWithReturn("", imageMoveRate - 2, imageMoveRate);
+                }
+            }
+        }
+        controller.DisplayDirectory();
+    }
+
 
     public void ClearPaths()
     {

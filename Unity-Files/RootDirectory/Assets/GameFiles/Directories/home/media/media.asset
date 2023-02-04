@@ -17,6 +17,9 @@ MonoBehaviour:
   previousDirectory: {fileID: 0}
   files: []
   paths:
+  - keyString: root
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
   - keyString: home
     pathDesc: 
     nextDirectory: {fileID: 11400000, guid: 12a820adef028d5459ee3cbde3245544, type: 2}

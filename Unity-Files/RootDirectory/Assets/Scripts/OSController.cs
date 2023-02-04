@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class OSController : MonoBehaviour
 {
     public Text displayText;
+    public GenerateImage imageDisplay;
     public InputAction[] inputActions;
 
     [HideInInspector] public OSNav osNav;
@@ -37,17 +38,14 @@ public class OSController : MonoBehaviour
         ClearCollectionsForNewDirectory();
         UnpackDirectory();
 
-        string joinedInteractionDescriptions = string.Join("\n", interactionDescriptionsInDirectory.ToArray());
+        //string joinedInteractionDescriptions = string.Join("\n", interactionDescriptionsInDirectory.ToArray());
 
-        string combinedText = osNav.currentDirectory.path + "\n" + joinedInteractionDescriptions;
-        //Debug.Log("DisplayDir: " + combinedText);
+        string combinedText = osNav.currentDirectory.path + "\n";
+        
         LogStringWithReturn(combinedText);
     }
 
-    public void DisplayFile()
-    {
-
-    }
+    
 
     void UnpackDirectory()
     {
@@ -62,8 +60,28 @@ public class OSController : MonoBehaviour
 
     public void LogStringWithReturn(string stringToAdd)
     {
+        imageDisplay.Translate();
         actionLog.Add(stringToAdd + "\n");
-        //Debug.Log(actionLog);
+    }
+
+    public void LogStringWithReturn(string stringToAdd, int loops)
+    {
+        for (int i = 0; i < loops; i++) {
+            imageDisplay.Translate();
+            actionLog.Add(stringToAdd + "\n");
+        }
+    }
+
+    public void LogStringWithReturn(string stringToAdd, int imageLoops, int textLoops)
+    {
+        for (int i = 0; i < imageLoops; i++)
+        {
+            imageDisplay.Translate();
+        }
+        for (int i = 0; i < textLoops; i++)
+        {
+            actionLog.Add(stringToAdd + "\n");
+        }
     }
 
 

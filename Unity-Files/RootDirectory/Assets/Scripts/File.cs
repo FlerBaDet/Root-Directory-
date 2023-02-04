@@ -10,5 +10,5 @@ public abstract class File : ScriptableObject
     public string keyword;
     public string type;
 
-    public abstract void fileContents();
+    public abstract void Open(OSController controller);
 }
