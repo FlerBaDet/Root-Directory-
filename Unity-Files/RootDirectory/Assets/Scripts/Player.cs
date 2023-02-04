@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Build;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -47,6 +48,19 @@ public class Player : MonoBehaviour
         gameObject.transform.localScale = currentScale;
 
         facingRight = !facingRight;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "OS")
+        {
+            loadOS();
+        }
+    }
+
+    void loadOS()
+    {
+        SceneManager.LoadScene(sceneName: "OS-Creation");
     }
 
 }
