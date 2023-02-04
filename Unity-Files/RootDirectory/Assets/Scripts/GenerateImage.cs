@@ -7,24 +7,25 @@ public class GenerateImage : MonoBehaviour
 {
     public GameObject image;
     public OSController controller;
+    GameObject newImage;
     Vector3 startPos;
 
     public void CreateImage(Sprite sprite)
     {
-        GameObject newImage = Instantiate(image, transform);
+        //Translate(controller.osNav.imageTransRate * 7);
+        controller.LogStringWithReturn("", 7f, true);
+        DeployImage(sprite);
+    }
+
+    private void DeployImage(Sprite sprite)
+    {
+        newImage = Instantiate(image, transform);
         newImage.transform.position = startPos;
         newImage.transform.SetParent(transform, false);
         newImage.GetComponent<Image>().sprite = sprite;
-        MakeSpace();
     }
 
-    public void MakeSpace()
-    {
-        for (int i = 0; i < controller.osNav.imageMoveRate; i++)
-        {
-            controller.LogStringWithReturn("", controller.osNav.imageTransRate/controller.osNav.imageMoveRate);
-        }
-    }
+
 
     public void Translate(int y)
     {

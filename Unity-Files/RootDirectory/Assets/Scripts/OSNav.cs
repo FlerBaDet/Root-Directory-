@@ -6,7 +6,8 @@ public class OSNav : MonoBehaviour
 {
     public Directory currentDirectory;
     public int imageMoveRate = 7;
-    public int imageTransRate = 38;
+    public int imageTransRate = 14;
+    public int imageFollowRate = 38;
 
     Dictionary<string, Directory> pathDictionary = new Dictionary<string, Directory> ();
     OSController controller;
@@ -61,10 +62,6 @@ public class OSNav : MonoBehaviour
             if (file.keyword.ToLower() == separatedInputWords[1].ToLower())
             {
                 file.Open(controller);
-                if (file.type == "jpog")
-                {
-                    controller.LogStringWithReturn("");
-                }
             }
         }
         controller.DisplayDirectory();
@@ -73,9 +70,13 @@ public class OSNav : MonoBehaviour
     public void ClearScreen()
     {
         ClearPaths();
+        controller.ClearCollectionsForNewDirectory();
+        controller.actionLog.Clear();
+        controller.displayText.text.Remove(0);
+        controller.ClearImagesFromScreen();
 
-        controller.displayText.text = null;
-        //Delete all the images
+        controller.DisplayDirectory();
+
     }
 
 

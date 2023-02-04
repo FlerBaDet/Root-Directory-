@@ -13,5 +13,6 @@ public class JPOG : File
     {
         imageDisplay = controller.imageDisplay;
         imageDisplay.CreateImage(image);
+
     }
 }

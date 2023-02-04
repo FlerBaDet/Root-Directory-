@@ -7,12 +7,14 @@ public class OSController : MonoBehaviour
 {
     public Text displayText;
     public GenerateImage imageDisplay;
+    public GameObject imageFolder;
     public InputAction[] inputActions;
+   
 
     [HideInInspector] public OSNav osNav;
     [HideInInspector] public List<string> interactionDescriptionsInDirectory = new List<string>();
 
-    List<string> actionLog = new List<string>();
+    [HideInInspector] public List<string> actionLog = new List<string>();
 
     // Start is called before the first frame update
     void Awake()
@@ -30,7 +32,7 @@ public class OSController : MonoBehaviour
     {
         string logAsText = string.Join("\n", actionLog.ToArray());
         displayText.text = logAsText;
-        //Debug.Log("Display: " + logAsText);
+        //Debug.Log("Log");
     }
 
     public void DisplayDirectory()
@@ -52,14 +54,23 @@ public class OSController : MonoBehaviour
         osNav.UnpackPaths();
     }
 
-    void ClearCollectionsForNewDirectory()
+    public void ClearCollectionsForNewDirectory()
     {
         interactionDescriptionsInDirectory.Clear();
         osNav.ClearPaths();
     }
 
+    public void ClearImagesFromScreen()
+    {
+        foreach(Transform child in imageFolder.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+    }
+
     public void LogStringWithReturn(string stringToAdd)
     {
+        
         imageDisplay.Translate(osNav.imageTransRate);
         actionLog.Add(stringToAdd + "\n");
         
@@ -67,9 +78,29 @@ public class OSController : MonoBehaviour
 
     public void LogStringWithReturn(string stringToAdd, int y)
     {
+        
         imageDisplay.Translate(y);
         actionLog.Add(stringToAdd + "\n");
 
+    }
+
+    public void LogStringWithReturn(string stringToAdd, float loops)
+    {
+        imageDisplay.Translate(osNav.imageTransRate);
+        for (int i = 0; i <= loops; i++)
+        {
+            actionLog.Add(stringToAdd + "\n");
+        }
+    }
+    
+    public void LogStringWithReturn(string stringToAdd, float loops, bool ImageLoopWith)
+    {
+        
+        for (int i = 0; i <= loops; i++)
+        {
+            imageDisplay.Translate(osNav.imageTransRate);
+            actionLog.Add(stringToAdd + "\n");
+        }
     }
 
 
