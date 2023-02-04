@@ -33,6 +33,7 @@ public class OSController : MonoBehaviour
 
     public void DisplayDirectory()
     {
+        ClearCollectionsForNewDirectory();
         UnpackDirectory();
 
         string joinedInteractionDescriptions = string.Join("\n", interactionDescriptionsInDirectory.ToArray());
@@ -44,6 +45,12 @@ public class OSController : MonoBehaviour
 
     void UnpackDirectory()
     {
+        osNav.UnpackPaths();
+    }
+
+    void ClearCollectionsForNewDirectory()
+    {
+        interactionDescriptionsInDirectory.Clear();
         osNav.UnpackPaths();
     }
 

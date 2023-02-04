@@ -13,6 +13,7 @@ public class TextInput : MonoBehaviour
     {
         controller = GetComponent<OSController>();
         inputField.onEndEdit.AddListener(AcceptStringInput);
+        inputField.caretWidth = 120;
     }
 
 
