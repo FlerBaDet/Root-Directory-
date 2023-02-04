@@ -159,7 +159,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.0007019043, y: 0.000015258789}
-  m_SizeDelta: {x: 3464, y: 212}
+  m_SizeDelta: {x: 3855, y: 212}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &187113143
 MonoBehaviour:
@@ -242,7 +242,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -171.91109, y: -249.95824}
-  m_SizeDelta: {x: 691.3392, y: 46.9715}
+  m_SizeDelta: {x: 774, y: 46.9715}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &751225370
 MonoBehaviour:
@@ -454,7 +454,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -170.87448, y: -3.8494}
-  m_SizeDelta: {x: 714.8635, y: 556.2182}
+  m_SizeDelta: {x: 808.2, y: 556.2182}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1533895322
 MonoBehaviour:
@@ -614,7 +614,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 1.1, y: -0.6}
-  m_SizeDelta: {x: 3464, y: 212}
+  m_SizeDelta: {x: 3874, y: 212}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1655495893
 MonoBehaviour:
@@ -706,9 +706,9 @@ MonoBehaviour:
     m_Alignment: 6
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
+    m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
-    m_LineSpacing: 0.45
+    m_LineSpacing: 0.5
   m_Text: root/home
 --- !u!222 &1745836264
 CanvasRenderer:
@@ -735,8 +735,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -184, y: 21}
-  m_SizeDelta: {x: 3357, y: 2369}
+  m_AnchoredPosition: {x: -164, y: 21}
+  m_SizeDelta: {x: 3943, y: 2369}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1759094954
 GameObject:
@@ -787,6 +787,7 @@ MonoBehaviour:
   displayText: {fileID: 1745836263}
   inputActions:
   - {fileID: 11400000, guid: 6bd54e8b4840c4a4bb999728864d85ca, type: 2}
+  - {fileID: 11400000, guid: e7031feac5b6c6841a3a08ea06f93321, type: 2}
   osNav: {fileID: 0}
   interactionDescriptionsInDirectory: []
 --- !u!114 &1759094957

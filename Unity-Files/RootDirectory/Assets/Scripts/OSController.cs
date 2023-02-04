@@ -29,7 +29,7 @@ public class OSController : MonoBehaviour
     {
         string logAsText = string.Join("\n", actionLog.ToArray());
         displayText.text = logAsText;
-        Debug.Log("Display: " + logAsText);
+        //Debug.Log("Display: " + logAsText);
     }
 
     public void DisplayDirectory()
@@ -40,7 +40,7 @@ public class OSController : MonoBehaviour
         string joinedInteractionDescriptions = string.Join("\n", interactionDescriptionsInDirectory.ToArray());
 
         string combinedText = osNav.currentDirectory.path + "\n" + joinedInteractionDescriptions;
-        Debug.Log("DisplayDir: " + combinedText);
+        //Debug.Log("DisplayDir: " + combinedText);
         LogStringWithReturn(combinedText);
     }
 

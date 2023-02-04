@@ -28,13 +28,27 @@ public class OSNav : MonoBehaviour
         if (pathDictionary.ContainsKey(directoryName))
         {
             currentDirectory = pathDictionary[directoryName];
-            controller.LogStringWithReturn(currentDirectory.path + directoryName + "/");
+            //controller.LogStringWithReturn(currentDirectory.path);
             controller.DisplayDirectory();
         }
         else
         {
-            controller.LogStringWithReturn("Directory '" + directoryName + "' does not exist");
+            controller.LogStringWithReturn("Directory '" + directoryName + "' does not exist" + "\n");
         }
+    }
+
+    public void ListDirectoriesAndFiles()
+    {
+        for (int i = 0; i < currentDirectory.paths.Length; i++)
+        {
+            controller.LogStringWithReturn(currentDirectory.paths[i].keyString);
+        }
+        for (int i = 0; i < currentDirectory.files.Length; i++)
+        {
+            controller.LogStringWithReturn(currentDirectory.files[i].keyword);
+        }
+        controller.DisplayDirectory();
+        //controller.LogStringWithReturn("\n");
     }
 
     public void ClearPaths()
