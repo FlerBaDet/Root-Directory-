@@ -60,31 +60,17 @@ public class OSController : MonoBehaviour
 
     public void LogStringWithReturn(string stringToAdd)
     {
-        imageDisplay.Translate();
+        imageDisplay.Translate(osNav.imageTransRate);
         actionLog.Add(stringToAdd + "\n");
+        
     }
 
-    public void LogStringWithReturn(string stringToAdd, int loops)
+    public void LogStringWithReturn(string stringToAdd, int y)
     {
-        for (int i = 0; i < loops; i++) {
-            imageDisplay.Translate();
-            actionLog.Add(stringToAdd + "\n");
-        }
-    }
+        imageDisplay.Translate(y);
+        actionLog.Add(stringToAdd + "\n");
 
-    public void LogStringWithReturn(string stringToAdd, int imageLoops, int textLoops)
-    {
-        for (int i = 0; i < imageLoops; i++)
-        {
-            Debug.Log(i);
-            imageDisplay.Translate();
-        }
-        for (int i = 0; i < textLoops; i++)
-        {
-            actionLog.Add(stringToAdd + "\n");
-        }
     }
-
 
 
 

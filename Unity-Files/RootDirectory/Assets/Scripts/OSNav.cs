@@ -5,7 +5,8 @@ using UnityEngine;
 public class OSNav : MonoBehaviour
 {
     public Directory currentDirectory;
-    public int imageMoveRate = 8;
+    public int imageMoveRate = 7;
+    public int imageTransRate = 38;
 
     Dictionary<string, Directory> pathDictionary = new Dictionary<string, Directory> ();
     OSController controller;
@@ -62,11 +63,19 @@ public class OSNav : MonoBehaviour
                 file.Open(controller);
                 if (file.type == "jpog")
                 {
-                    controller.LogStringWithReturn("", 1, imageMoveRate);
+                    controller.LogStringWithReturn("");
                 }
             }
         }
         controller.DisplayDirectory();
+    }
+
+    public void ClearScreen()
+    {
+        ClearPaths();
+
+        controller.displayText.text = null;
+        //Delete all the images
     }
 
 
