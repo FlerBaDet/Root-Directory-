@@ -11,4 +11,5 @@ public abstract class File : ScriptableObject
     public string type;
 
     public abstract void Open(OSController controller);
+    public abstract void Delete(OSController controller);
 }

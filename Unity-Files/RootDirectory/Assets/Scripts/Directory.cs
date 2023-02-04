@@ -9,6 +9,6 @@ public class Directory : ScriptableObject
     public string path;
     public string keyword;
     public Directory previousDirectory;
-    public File[] files;
-    public Paths[] paths;
+    public List<Paths> paths = new List<Paths>();
+    public List<File> files = new List<File>();
 }

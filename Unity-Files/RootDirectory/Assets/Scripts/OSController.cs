@@ -1,5 +1,7 @@
 using System.Collections;
+using System.IO;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,7 +21,17 @@ public class OSController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+        if (!System.IO.Directory.Exists("Assets/GameFiles/DirectoriesSAVE"))
+        {
+            FileUtil.CopyFileOrDirectory("Assets/GameFiles/Directories", "Assets/GameFiles/DirectoriesSAVE");
+        }
+        else
+        {
+            FileUtil.DeleteFileOrDirectory("Assets/GameFiles/DirectoriesSAVE");
+            FileUtil.CopyFileOrDirectory("Assets/GameFiles/Directories", "Assets/GameFiles/DirectoriesSAVE");
+        }
         osNav = GetComponent<OSNav>();
+        osNav.currentDirectory = Resources.Load("Assets/GameFiles/DirectoriesSAVE/root") as Directory;
     }
 
     private void Start()
