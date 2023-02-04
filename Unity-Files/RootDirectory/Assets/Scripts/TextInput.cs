@@ -1,18 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TextInput : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public InputField inputField;
+
+    OSController controller;
+
+    void Awake()
     {
-        
+        controller = GetComponent<OSController>();
+        inputField.onEndEdit.AddListener(AcceptStringInput);
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void AcceptStringInput(string userInput)
     {
-        
+        userInput = userInput.ToLower();
+        controller.LogStringWithReturn(userInput);
+        InputComplete();
     }
+
+    void InputComplete()
+    {
+        controller.DisplayLoggedText();
+        inputField.ActivateInputField();
+        inputField.text = null;
+    }
+
 }
