@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
     public float moveSpeed = 3f;
     public bool facingRight = true;
+    public bool canPlayPong = false;
+    public bool canLoadOS = false;
 
     float inputHorizontal;
 
@@ -40,6 +42,23 @@ public class Player : MonoBehaviour
             flip();
         }
 
+        if (canPlayPong == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("Play Pong");
+                loadPong();
+            }
+        }
+        else if (canLoadOS == true)
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("Open OS");
+                loadOS();
+            }
+        }
+
     }
     void flip()
     {
@@ -49,18 +68,55 @@ public class Player : MonoBehaviour
 
         facingRight = !facingRight;
     }
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "OS")
         {
-            loadOS();
+            canLoadOS = true;
+        }
+        else if (collision.gameObject.tag == "TV")
+        {
+            canPlayPong = true;
+            Debug.Log("true");
         }
     }
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "TV")
+        {
+            canPlayPong = false;
+        }
+        else if(collision.gameObject.tag == "OS")
+        {
+            canLoadOS = false;
+        }
+    }
+
+
     void loadOS()
     {
-        SceneManager.LoadScene(sceneName: "OS-Creation");
+        SceneManager.LoadScene(1);
+        canLoadOS = false;
+    }
+
+    void loadPong()
+    {
+
+        SceneManager.LoadScene(2);
+        canPlayPong = false;
+
+        //if (Input.GetKeyDown(KeyCode.E))
+        //{
+           // if (SceneManager.GetActiveScene().buildIndex == 0)
+           // {
+           //     SceneManager.LoadScene(2, LoadSceneMode.Additive);
+           // }
+           // else
+           // {
+            //    SceneManager.LoadScene(0);
+            //}
+        //}
     }
 
 }
