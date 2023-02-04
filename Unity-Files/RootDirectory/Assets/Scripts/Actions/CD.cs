@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[CreateAssetMenu(menuName = "SodOS/InputActions/Go")]
+[CreateAssetMenu(menuName = "Sod-OS/InputActions/Go")]
 public class CD : InputAction
 {
-    public override void RespondToInput(OSController controller, string[] seperatedInputWords)
+    public override void RespondToInput(OSController controller, string[] separatedInputWords)
     {
-        controller.osNav.AttemptToChangeDirectories(seperatedInputWords[1]);
+        controller.osNav.AttemptToChangeDirectories(separatedInputWords[1]);
     }
 }

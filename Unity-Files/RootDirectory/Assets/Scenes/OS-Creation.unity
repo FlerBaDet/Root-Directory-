@@ -785,6 +785,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displayText: {fileID: 1745836263}
+  inputActions:
+  - {fileID: 11400000, guid: 6bd54e8b4840c4a4bb999728864d85ca, type: 2}
   osNav: {fileID: 0}
   interactionDescriptionsInDirectory: []
 --- !u!114 &1759094957
