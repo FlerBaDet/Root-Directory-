@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: root/home/
   keyword: home
+  previousDirectory: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
   files: []
-  directories:
-  - {fileID: 11400000, guid: aeb6bc1d688c7f240b07161faae322bf, type: 2}
+  paths:
+  - keyString: root
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
+  - keyString: documents
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: aeb6bc1d688c7f240b07161faae322bf, type: 2}

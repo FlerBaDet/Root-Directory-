@@ -8,6 +8,7 @@ public class OSController : MonoBehaviour
     public Text displayText;
 
     [HideInInspector] public OSNav osNav;
+    [HideInInspector] public List<string> interactionDescriptionsInDirectory = new List<string>();
 
     List<string> actionLog = new List<string>();
 
@@ -32,9 +33,18 @@ public class OSController : MonoBehaviour
 
     public void DisplayDirectory()
     {
-        string combinedText = osNav.currentDirectory.path + "\n";
+        UnpackDirectory();
+
+        string joinedInteractionDescriptions = string.Join("\n", interactionDescriptionsInDirectory.ToArray());
+
+        string combinedText = osNav.currentDirectory.path + "\n" + joinedInteractionDescriptions;
 
         LogStringWithReturn(combinedText);
+    }
+
+    void UnpackDirectory()
+    {
+        osNav.UnpackPaths();
     }
 
     public void LogStringWithReturn(string stringToAdd)

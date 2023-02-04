@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: root
   m_EditorClassIdentifier: 
   path: root/
-  keyword: 
+  keyword: root
+  previousDirectory: {fileID: 0}
   files: []
-  directories:
-  - {fileID: 11400000, guid: 12a820adef028d5459ee3cbde3245544, type: 2}
+  paths:
+  - keyString: home
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 12a820adef028d5459ee3cbde3245544, type: 2}

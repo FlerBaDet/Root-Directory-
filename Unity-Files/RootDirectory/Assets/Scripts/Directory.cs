@@ -8,6 +8,7 @@ public class Directory : ScriptableObject
     [TextArea]
     public string path;
     public string keyword;
+    public Directory previousDirectory;
     public File[] files;
-    public Directory[] directories;
+    public Paths[] paths;
 }
