@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-
-[CreateAssetMenu(menuName = "Sod-OS/FILE")]
-public class File : ScriptableObject
+public abstract class File : ScriptableObject
 {
     [TextArea]
     public string path;
     public string keyword;
     public string type;
+
+    public abstract void Open(OSController controller);
 }

@@ -7,6 +7,7 @@ public class TextInput : MonoBehaviour
 {
     public InputField inputField;
 
+    bool inputDetected = false;
     OSController controller;
 
     void Awake()
@@ -32,11 +33,21 @@ public class TextInput : MonoBehaviour
             if (inputAction.keyWord.ToLower() == separatedInputWords[0])//CD
             {
                 //Debug.Log(separatedInputWords[0]);
+                inputDetected = true;
                 inputAction.RespondToInput(controller, separatedInputWords);
             }
         }
+        if (!inputDetected)
+        {
+            controller.LogStringWithReturn("Command '" + separatedInputWords[0] + "' does not exist" + "\n");
 
+        }
+        else
+        {
+            inputDetected = false;
+        }
         InputComplete();
+
     }
 
     void InputComplete()
