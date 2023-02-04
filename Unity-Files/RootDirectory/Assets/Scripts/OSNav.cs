@@ -28,7 +28,7 @@ public class OSNav : MonoBehaviour
         if (pathDictionary.ContainsKey(directoryName))
         {
             currentDirectory = pathDictionary[directoryName];
-            controller.LogStringWithReturn(currentDirectory.path + "/" + directoryName);
+            controller.LogStringWithReturn(currentDirectory.path + directoryName + "/");
             controller.DisplayDirectory();
         }
         else
