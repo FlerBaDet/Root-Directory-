@@ -21,6 +21,9 @@ public class TextInput : MonoBehaviour
     {
         userInput = userInput.ToLower();
         controller.LogStringWithReturn(userInput);
+
+        char[] delimiterCharacters = { ' ' };
+        //string[]
         InputComplete();
     }
 

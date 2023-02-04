@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class OSController : MonoBehaviour
 {
     public Text displayText;
+    public InputAction[] inputActions;
 
     [HideInInspector] public OSNav osNav;
     [HideInInspector] public List<string> interactionDescriptionsInDirectory = new List<string>();
