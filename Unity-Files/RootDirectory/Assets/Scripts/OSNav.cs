@@ -19,12 +19,12 @@ public class OSNav : MonoBehaviour
     private void Awake()
     {
         controller = GetComponent<OSController>();
-        currentDirectory = Resources.Load("Assets/GameFiles/DirectoriesSAVE/root") as Directory;
+        //currentDirectory = Resources.Load("Assets/GameFiles/DirectoriesSAVE/root") as Directory;
     }
 
     private void Start()
     {
-        currentDirectory = Resources.Load("Assets/GameFiles/DirectoriesSAVE/root") as Directory;
+        //currentDirectory = Resources.Load("Assets/GameFiles/DirectoriesSAVE/root") as Directory;
         
     }
 
