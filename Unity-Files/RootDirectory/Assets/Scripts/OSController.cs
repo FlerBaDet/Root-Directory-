@@ -76,6 +76,7 @@ public class OSController : MonoBehaviour
     {
         for (int i = 0; i < imageLoops; i++)
         {
+            Debug.Log(i);
             imageDisplay.Translate();
         }
         for (int i = 0; i < textLoops; i++)

@@ -19,7 +19,7 @@ public class GenerateImage : MonoBehaviour
 
     public void Translate()
     {
-        transform.position += new Vector3(0,4);
+        transform.position += new Vector3(0,7);
     }
 
     private void Start()

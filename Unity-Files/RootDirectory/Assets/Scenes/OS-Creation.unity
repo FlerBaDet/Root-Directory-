@@ -855,7 +855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentDirectory: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
-  imageMoveRate: 8
+  imageMoveRate: 7
 --- !u!114 &1759094958
 MonoBehaviour:
   m_ObjectHideFlags: 0

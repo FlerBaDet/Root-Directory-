@@ -62,7 +62,7 @@ public class OSNav : MonoBehaviour
                 file.Open(controller);
                 if (file.type == "jpog")
                 {
-                    controller.LogStringWithReturn("", imageMoveRate - 2, imageMoveRate);
+                    controller.LogStringWithReturn("", 1, imageMoveRate);
                 }
             }
         }
