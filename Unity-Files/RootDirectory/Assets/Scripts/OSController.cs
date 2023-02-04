@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class OSController : MonoBehaviour
 {
     public Text displayText;
+    public InputAction[] inputActions;
 
     [HideInInspector] public OSNav osNav;
     [HideInInspector] public List<string> interactionDescriptionsInDirectory = new List<string>();
@@ -33,6 +34,7 @@ public class OSController : MonoBehaviour
 
     public void DisplayDirectory()
     {
+        ClearCollectionsForNewDirectory();
         UnpackDirectory();
 
         string joinedInteractionDescriptions = string.Join("\n", interactionDescriptionsInDirectory.ToArray());
@@ -45,6 +47,12 @@ public class OSController : MonoBehaviour
     void UnpackDirectory()
     {
         osNav.UnpackPaths();
+    }
+
+    void ClearCollectionsForNewDirectory()
+    {
+        interactionDescriptionsInDirectory.Clear();
+        osNav.ClearPaths();
     }
 
     public void LogStringWithReturn(string stringToAdd)
