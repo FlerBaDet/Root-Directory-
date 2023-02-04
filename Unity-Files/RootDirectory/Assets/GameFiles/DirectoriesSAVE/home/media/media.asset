@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c2ec1a2c442e643820f5e00a5efaeb, type: 3}
+  m_Name: media
+  m_EditorClassIdentifier: 
+  path: root/home/media
+  keyword: media
+  previousDirectory: {fileID: 0}
+  files: []
+  paths:
+  - keyString: root
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
+  - keyString: home
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 12a820adef028d5459ee3cbde3245544, type: 2}
+  - keyString: pictures
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 55233d6f09a83ee499b19a83b294958f, type: 2}
+  - keyString: videos
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 5a34d0e8b7482f84f8b0f5d5baf4996e, type: 2}
+  - keyString: games
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 643fb5d4349a73d43b09f9431144bd2a, type: 2}

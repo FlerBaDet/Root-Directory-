@@ -15,4 +15,10 @@ public class JPOG : File
         imageDisplay.CreateImage(image);
 
     }
+
+    public override void Delete(OSController controller)
+    {
+        
+    }
+
 }

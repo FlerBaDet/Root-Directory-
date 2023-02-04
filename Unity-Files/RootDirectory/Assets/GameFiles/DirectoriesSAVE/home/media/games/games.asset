@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6c2ec1a2c442e643820f5e00a5efaeb, type: 3}
-  m_Name: pictures
+  m_Name: games
   m_EditorClassIdentifier: 
-  path: root/home/media/pictures
-  keyword: pictures
+  path: root/home/media/games
+  keyword: games
   previousDirectory: {fileID: 0}
+  files: []
   paths:
   - keyString: root
     pathDesc: 
@@ -22,5 +23,3 @@ MonoBehaviour:
   - keyString: media
     pathDesc: 
     nextDirectory: {fileID: 11400000, guid: d69633e60b150f248b6e81d82d4dbac9, type: 2}
-  files:
-  - {fileID: 11400000, guid: 8df9d56dfdb6bdf47bf435d560bb213c, type: 2}
