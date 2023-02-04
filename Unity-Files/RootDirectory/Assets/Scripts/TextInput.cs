@@ -23,7 +23,17 @@ public class TextInput : MonoBehaviour
         controller.LogStringWithReturn(userInput);
 
         char[] delimiterCharacters = { ' ' };
-        //string[]
+        string[] separatedInputWords = userInput.Split(delimiterCharacters);
+
+        for (int i = 0; i < controller.inputActions.Length; i++)
+        {
+            InputAction inputAction = controller.inputActions[i];
+            if (inputAction.keyWord == separatedInputWords[0])
+            {
+                inputAction.RespondToInput(controller, separatedInputWords);
+            }
+        }
+
         InputComplete();
     }
 

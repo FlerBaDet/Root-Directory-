@@ -5,5 +5,5 @@ using UnityEngine;
 public abstract class InputAction : ScriptableObject
 {
     public string keyWord;
-    public abstract void RespondToInput (OSController controller, string[] seperatedInputWords);
+    public abstract void RespondToInput (OSController controller, string[] separatedInputWords);
 }

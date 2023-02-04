@@ -52,7 +52,7 @@ public class OSController : MonoBehaviour
     void ClearCollectionsForNewDirectory()
     {
         interactionDescriptionsInDirectory.Clear();
-        osNav.UnpackPaths();
+        osNav.ClearPaths();
     }
 
     public void LogStringWithReturn(string stringToAdd)
