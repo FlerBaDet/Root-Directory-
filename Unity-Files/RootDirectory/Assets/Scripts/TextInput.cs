@@ -13,13 +13,29 @@ public class TextInput : MonoBehaviour
     {
         controller = GetComponent<OSController>();
         inputField.onEndEdit.AddListener(AcceptStringInput);
+        inputField.caretWidth = 120;
     }
 
 
     void AcceptStringInput(string userInput)
     {
+        //Debug.Log(userInput);
         userInput = userInput.ToLower();
         controller.LogStringWithReturn(userInput);
+
+        char[] delimiterCharacters = { ' ' };
+        string[] separatedInputWords = userInput.Split(delimiterCharacters);
+
+        for (int i = 0; i < controller.inputActions.Length; i++)
+        {
+            InputAction inputAction = controller.inputActions[i];
+            if (inputAction.keyWord.ToLower() == separatedInputWords[0])//CD
+            {
+                //Debug.Log(separatedInputWords[0]);
+                inputAction.RespondToInput(controller, separatedInputWords);
+            }
+        }
+
         InputComplete();
     }
 
