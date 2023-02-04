@@ -15,14 +15,11 @@ MonoBehaviour:
   path: root/home/
   keyword: home
   previousDirectory: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
-  files: []
   paths:
-  - keyString: root
-    pathDesc: 
-    nextDirectory: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
   - keyString: documents
     pathDesc: 
     nextDirectory: {fileID: 11400000, guid: aeb6bc1d688c7f240b07161faae322bf, type: 2}
   - keyString: media
     pathDesc: 
     nextDirectory: {fileID: 11400000, guid: d69633e60b150f248b6e81d82d4dbac9, type: 2}
+  files: []
