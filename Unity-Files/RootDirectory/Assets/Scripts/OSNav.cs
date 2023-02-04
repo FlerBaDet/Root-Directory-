@@ -47,8 +47,9 @@ public class OSNav : MonoBehaviour
         {
             controller.LogStringWithReturn(currentDirectory.files[i].keyword);
         }
+        controller.LogStringWithReturn("");
         controller.DisplayDirectory();
-        //controller.LogStringWithReturn("\n");
+        
     }
 
     public void ClearPaths()

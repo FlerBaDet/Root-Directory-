@@ -44,6 +44,11 @@ public class OSController : MonoBehaviour
         LogStringWithReturn(combinedText);
     }
 
+    public void DisplayFile()
+    {
+
+    }
+
     void UnpackDirectory()
     {
         osNav.UnpackPaths();

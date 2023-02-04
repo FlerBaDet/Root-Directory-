@@ -15,7 +15,8 @@ MonoBehaviour:
   path: root/home/media/pictures
   keyword: pictures
   previousDirectory: {fileID: 0}
-  files: []
+  files:
+  - {fileID: 11400000, guid: 8df9d56dfdb6bdf47bf435d560bb213c, type: 2}
   paths:
   - keyString: media
     pathDesc: 

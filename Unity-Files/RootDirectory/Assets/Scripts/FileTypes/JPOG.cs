@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class JPOG : File
 {
     public Sprite image;
+    public Image imageDisplay;
     public override void fileContents()
     {
         
