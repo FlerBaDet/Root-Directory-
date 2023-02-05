@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c2ec1a2c442e643820f5e00a5efaeb, type: 3}
-  m_Name: games
+  m_Script: {fileID: 11500000, guid: dcbcc2bfa7f7f584599be183b527bae6, type: 3}
+  m_Name: apple
   m_EditorClassIdentifier: 
-  path: root/home/media/games
-  keyword: games
-  previousDirectory: {fileID: 0}
-  paths: []
-  files: []
+  path: root/home/media/pictures/apple.jpog
+  keyword: apple.jpog
+  type: jpog
+  deleted: 0
+  image: {fileID: 21300000, guid: 5eb0e340176161f4db45d911f0af81f1, type: 3}

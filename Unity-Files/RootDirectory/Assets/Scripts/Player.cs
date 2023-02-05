@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     public bool canPlayPong = false;
     public bool canLoadOS = false;
 
-    AudioSource audioData;
+   public AudioSource audioData;
 
     // Start is called before the first frame update
     void Start()
