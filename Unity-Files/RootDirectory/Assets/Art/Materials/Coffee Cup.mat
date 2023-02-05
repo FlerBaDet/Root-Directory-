@@ -20,8 +20,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: TV
-  m_Shader: {fileID: -6465566751694194690, guid: 74d4ee2340c494f4fbba067ce89024df, type: 3}
+  m_Name: Coffee Cup
+  m_Shader: {fileID: -6465566751694194690, guid: 9d9c1a16369fc7840a89e54eea65bad9, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -70,7 +70,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Rainbow:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2e67958be391c6a48ae0a9934d276db0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_3fe442e1918345f2abc8698a69cabdb8_Texture_1:
@@ -93,7 +93,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Scroll: 1.38
+    - _Scroll: 0.75
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
