@@ -14,6 +14,7 @@ public class OSNav : MonoBehaviour
     public int imageMoveRate = 7;
     public int imageTransRate = 14;
     public int imageFollowRate = 38;
+    public string divider = "=========================================================";
     bool deleteSucc = false;
     bool openSucc = false;
     bool copySucc = false;
@@ -63,14 +64,22 @@ public class OSNav : MonoBehaviour
     {
         if (directoryName.ToLower() == currentDirectory.previousDirectory.keyword.ToLower() | pathDictionary.ContainsKey(directoryName))
         {
-            currentDirectory = pathDictionary[directoryName];
-            controller.LogStringWithReturn("============================");
-            controller.DisplayDirectory();
+            if (pathDictionary[directoryName].admin != "t" || isAdmin)
+            {
+                currentDirectory = pathDictionary[directoryName];
+                controller.LogStringWithReturn(divider);
+                controller.DisplayDirectory();
+            }
+            else
+            {
+                controller.LogStringWithReturn(directoryName + " HAS ADMIN ONLY ACESS");
+                controller.LogStringWithReturn(divider);
+            }
         }
         else
         {
             controller.LogStringWithReturn("Directory '" + directoryName + "' does not exist");
-            controller.LogStringWithReturn("============================");
+            controller.LogStringWithReturn(divider);
         }
     }
 
@@ -82,7 +91,10 @@ public class OSNav : MonoBehaviour
             {
                 if (path != null)
                 {
-                    controller.LogStringWithReturn(path.keyString);
+                    if (path.nextDirectory.admin != "t" || isAdmin)
+                    {
+                        controller.LogStringWithReturn(path.keyString);
+                    }
                 }
             }
         }
@@ -99,7 +111,7 @@ public class OSNav : MonoBehaviour
                 }
             }
         }
-        controller.LogStringWithReturn("============================");
+        controller.LogStringWithReturn(divider);
         controller.DisplayDirectory();
         
     }
@@ -135,7 +147,7 @@ public class OSNav : MonoBehaviour
         {
             openSucc = false;
         }
-        controller.LogStringWithReturn("============================");
+        controller.LogStringWithReturn(divider);
         controller.DisplayDirectory();
     }
 
@@ -167,7 +179,7 @@ public class OSNav : MonoBehaviour
             deleteSucc = false;
         }
 
-        controller.LogStringWithReturn("============================");
+        controller.LogStringWithReturn(divider);
         controller.DisplayDirectory();
     }
 
@@ -199,7 +211,7 @@ public class OSNav : MonoBehaviour
             copySucc = false;
         }
 
-        controller.LogStringWithReturn("============================");
+        controller.LogStringWithReturn(divider);
         controller.DisplayDirectory();
     }
 
@@ -229,7 +241,7 @@ public class OSNav : MonoBehaviour
             pasteFail = false;
         }
 
-        controller.LogStringWithReturn("============================");
+        controller.LogStringWithReturn(divider);
         controller.DisplayDirectory();
     }
 
@@ -279,7 +291,7 @@ public class OSNav : MonoBehaviour
 
         
 
-        controller.LogStringWithReturn("============================");
+        controller.LogStringWithReturn(divider);
         controller.DisplayDirectory();
     }
 
@@ -288,7 +300,15 @@ public class OSNav : MonoBehaviour
         if (separetedInputWords[1].ToLower() == "hotstuff68")
         {
             isAdmin = true;
+            controller.LogStringWithReturn("SUCCESS: NOW LOGGED IN AS ADMIN");
+            controller.LogStringWithReturn(divider);
         }
+        else
+        {
+            controller.LogStringWithReturn("INCORRECT PASSWORD");
+            controller.LogStringWithReturn(divider);
+        }
+        controller.DisplayDirectory();
     }
 
 

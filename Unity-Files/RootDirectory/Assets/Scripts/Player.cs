@@ -14,7 +14,15 @@ public class Player : MonoBehaviour
     public bool canPlayPong = false;
     public bool canLoadOS = false;
 
-   public AudioSource audioData;
+    public bool inOffice = true;
+    public bool playingPong = false;
+    public bool inOS = false;
+
+    public ColliderManager colliderManager;
+    public ColliderManager2 colliderManager2;
+    public ColliderManager3 colliderManager3;
+
+    public AudioSource audioData;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +31,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
+    [System.Obsolete]
     void Update()
     {
 
@@ -47,8 +56,10 @@ public class Player : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Play Pong");
+                unloadOffice();
                 loadPong();
+                canPlayPong = false;
+                playingPong = true;
             }
         }
         else if (canLoadOS == true)
@@ -56,7 +67,28 @@ public class Player : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Open OS");
+                unloadOffice();
                 loadOS();
+                canLoadOS = false;
+            }
+        }
+
+        if (playingPong == true) {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Debug.Log("Escape");
+                loadOffice();
+                unloadPong();
+            }
+        }
+
+        if (inOS == true)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Debug.Log("Escape");
+                loadOffice();
+                unloadOS();
             }
         }
 
@@ -97,27 +129,38 @@ public class Player : MonoBehaviour
 
     void loadOS()
     {
-        SceneManager.LoadScene(1);
-        canLoadOS = false;
+        colliderManager3.turnOn();
+        colliderManager3.See();
     }
 
+    void unloadOS()
+    {
+        colliderManager3.turnOff();
+        colliderManager3.unSee();
+    }
+
+    void unloadOffice()
+    {
+        colliderManager.unshowPlayer();
+        colliderManager.turnOff();
+        colliderManager.unSee();
+    }
+
+    public void loadOffice()
+    {
+        colliderManager.showPlayer();
+        colliderManager.turnOn();
+        colliderManager.See();
+    }
+
+    [System.Obsolete]
+    void unloadPong()
+    {
+        colliderManager2.turnOff();
+    }
     void loadPong()
     {
-
-        SceneManager.LoadScene(2);
-        canPlayPong = false;
-
-        //if (Input.GetKeyDown(KeyCode.E))
-        //{
-           // if (SceneManager.GetActiveScene().buildIndex == 0)
-           // {
-           //     SceneManager.LoadScene(2, LoadSceneMode.Additive);
-           // }
-           // else
-           // {
-            //    SceneManager.LoadScene(0);
-            //}
-        //}
+        colliderManager2.turnOn();
     }
 
 }

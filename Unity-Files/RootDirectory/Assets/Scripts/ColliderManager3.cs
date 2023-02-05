@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColliderManager : MonoBehaviour
+public class ColliderManager3 : MonoBehaviour
 {
-
     public List<GameObject> gameObjs = new List<GameObject>();
     public List<GameObject> needScript = new List<GameObject>();
-    public GameObject player;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -54,19 +52,4 @@ public class ColliderManager : MonoBehaviour
             obj.GetComponent<SpriteRenderer>().enabled = true;
         }
     }
-
-    public void showPlayer()
-    {
-        player.GetComponent<BoxCollider2D>().enabled = true;
-        player.GetComponent<CircleCollider2D>().enabled = true;
-        player.GetComponent<SpriteRenderer>().enabled = true;
-    }
-
-    public void unshowPlayer()
-    {
-        player.GetComponent<BoxCollider2D>().enabled = false;
-        player.GetComponent<CircleCollider2D>().enabled = false;
-        player.GetComponent<SpriteRenderer>().enabled = false;
-    }
-
 }
