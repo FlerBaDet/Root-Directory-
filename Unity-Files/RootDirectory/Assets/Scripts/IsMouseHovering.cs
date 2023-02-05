@@ -7,7 +7,7 @@ public class IsMouseHovering : MonoBehaviour
 {
 
     public Material Outline;
-    public string name;
+    //public string name;
     AudioSource m_AudioSource;
     Animation m_animation;
     Animator m_animator;
