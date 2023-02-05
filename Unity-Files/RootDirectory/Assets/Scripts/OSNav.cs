@@ -146,7 +146,7 @@ public class OSNav : MonoBehaviour
         {
             foreach (File file in currentDirectory.files)
             {
-                if (file.keyword.ToLower() == separatedInputWords[1].ToLower())
+                if (file.keyword.ToLower() == separatedInputWords[1].ToLower() && !file.deleted)
                 {
                     //currentDirectory.files.Remove(file);
                     copiedFile = Instantiate(file);
@@ -173,7 +173,7 @@ public class OSNav : MonoBehaviour
     {
         foreach (File file in currentDirectory.files)
         {
-            if (file.keyword.ToLower() == separatedInputWords[1].ToLower())
+            if (file.keyword.ToLower() == separatedInputWords[1].ToLower() && !file.deleted)
             {
                 controller.LogStringWithReturn(separatedInputWords[1] + " already exists here");
                 pasteFail = true;

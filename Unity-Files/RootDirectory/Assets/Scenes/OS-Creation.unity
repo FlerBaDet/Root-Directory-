@@ -964,7 +964,7 @@ MonoBehaviour:
   root: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
   copiedFile: {fileID: 0}
   imageMoveRate: 8
-  imageTransRate: 32
+  imageTransRate: 36
   imageFollowRate: 45
 --- !u!114 &1759094958
 MonoBehaviour:
