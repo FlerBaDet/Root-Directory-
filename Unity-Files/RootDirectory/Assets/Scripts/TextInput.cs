@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -40,6 +41,7 @@ public class TextInput : MonoBehaviour
         if (!inputDetected)
         {
             controller.LogStringWithReturn("Command '" + separatedInputWords[0] + "' does not exist" + "\n");
+            controller.LogStringWithReturn(controller.osNav.divider);
 
         }
         else
