@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 public class LampSwitch : MonoBehaviour
 {
 
-    public Material Outline;
+    //public Material Outline;
     public string name;
     AudioSource m_AudioSource;
     bool m_switch;

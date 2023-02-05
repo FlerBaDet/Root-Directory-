@@ -12,6 +12,7 @@ public class SpawnCloud : MonoBehaviour
     public int spawnTime = 5;
 
     public GameObject cloud1;
+
     public GameObject cloud2;
     public GameObject cloud3;
     public GameObject cloud4; 
@@ -21,6 +22,11 @@ public class SpawnCloud : MonoBehaviour
     void Start()
     {
         timer = Random.Range(-3, 0);
+        cloud1.transform.parent = gameObject.transform.parent;
+        cloud2.transform.parent = gameObject.transform.parent;
+        cloud3.transform.parent = gameObject.transform.parent;
+        cloud4.transform.parent = gameObject.transform.parent;
+        cloud5.transform.parent = gameObject.transform.parent;
     }
 
     // Update is called once per frame
@@ -36,6 +42,7 @@ public class SpawnCloud : MonoBehaviour
             if(cloudNum == 1)
             {
                 GameObject newObject = Instantiate(cloud1);
+                
             }
 
             if (cloudNum == 2)

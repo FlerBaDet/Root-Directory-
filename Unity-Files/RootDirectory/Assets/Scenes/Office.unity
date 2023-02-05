@@ -278,11 +278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3557186816749160872, guid: 494a4c932beae5c4abaea77242fd28e9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.2809152
+      value: 0.113
       objectReference: {fileID: 0}
     - target: {fileID: 3557186816749160872, guid: 494a4c932beae5c4abaea77242fd28e9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: 3557186816749160872, guid: 494a4c932beae5c4abaea77242fd28e9, type: 3}
       propertyPath: m_LocalRotation.w
@@ -873,7 +873,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7537231916499540770, guid: 1292f1257349eda49aec87997797de6d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.34
+      value: -4.193
       objectReference: {fileID: 0}
     - target: {fileID: 7537231916499540770, guid: 1292f1257349eda49aec87997797de6d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1156,7 +1156,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.011602
+  orthographic size: 4.990609
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1252,7 +1252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7091432756282395539, guid: 499bc13a0f8cd6d4a8ea560563dc9632, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.975096
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 7091432756282395539, guid: 499bc13a0f8cd6d4a8ea560563dc9632, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1443,7 +1443,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 262832161d216784bb0d28a3a438b93b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.365
   m_Pitch: 2.2
   Loop: 1
   Mute: 0
@@ -2485,7 +2485,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2794,7 +2794,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
