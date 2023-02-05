@@ -6,20 +6,18 @@ using UnityEngine;
 public class IsMouseHovering : MonoBehaviour
 {
 
+    public Material Outline;
 
     private void OnMouseEnter()
     {
-        Shader.SetGlobalFloat("_IsMouseHovering", 1);
-        Debug.Log("Mouse enter");
+        Outline.SetFloat("_IsMouseHovering", 1);
     }
     private void OnMouseOver()
     {
-        Shader.SetGlobalFloat("_IsMouseHovering", 1);
-        Debug.Log("Mouse hover");
+        Outline.SetFloat
     }
     private void OnMouseExit()
     {
-        Shader.SetGlobalFloat("_IsMouseHovering", 0);
-        Debug.Log("Mouse exit");
+        Outline.SetFloat("_IsMouseHovering", 0);
     }
 }

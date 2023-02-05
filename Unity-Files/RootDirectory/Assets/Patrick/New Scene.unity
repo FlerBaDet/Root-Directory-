@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 620771918}
   - component: {fileID: 620771917}
+  - component: {fileID: 620771919}
   m_Layer: 0
   m_Name: Coffee-01
   m_TagString: Untagged
@@ -160,7 +161,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5d7312df93576ab4f91efe0763595a6a, type: 2}
+  - {fileID: 2100000, guid: 0885662484b31274ab8eb175a655d5c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -207,6 +208,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &620771919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620771916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13240b9851d1f3740b9aacc785c41412, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Outline: {fileID: 2100000, guid: 0885662484b31274ab8eb175a655d5c7, type: 2}
 --- !u!1 &1726390830
 GameObject:
   m_ObjectHideFlags: 0
@@ -415,3 +429,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13240b9851d1f3740b9aacc785c41412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Outline: {fileID: 2100000, guid: 5d7312df93576ab4f91efe0763595a6a, type: 2}
