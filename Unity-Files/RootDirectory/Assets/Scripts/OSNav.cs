@@ -185,6 +185,7 @@ public class OSNav : MonoBehaviour
         {
             
             currentDirectory.files.Add(copiedFile);
+            controller.LogStringWithReturn("Pasted File: " + separatedInputWords[1]);
         }
         else
         {
