@@ -1,0 +1,19 @@
+Commands
+
+CD - Change directory to another
+
+DIR - shows you all the files in the directory
+
+OPN - Open files
+
+CPY - copy a file
+
+PST - paste a file
+
+DEL - delete a file
+
+CUT - cut a file
+
+ADM - add the password after to log in as admin
+
+COMMAND [space] FILENAME/FOLDERNAME

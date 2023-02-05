@@ -158,6 +158,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentDirectory: {fileID: 11400000, guid: 55233d6f09a83ee499b19a83b294958f, type: 2}
   root: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
+  player: {fileID: 0}
   copiedFile: {fileID: 0}
   isAdmin: 0
   imageMoveRate: 8
@@ -192,6 +193,12 @@ MonoBehaviour:
   EVENTs:
   - {fileID: 11400000, guid: 0fd8563c2e7c5a94cb24eec4ef3c1223, type: 2}
   - {fileID: 11400000, guid: 236bba0d51e94244cb1fe399ee8a7ce1, type: 2}
+  - {fileID: 11400000, guid: e621ad62d7c21604081ae960d2d1e8c3, type: 2}
+  - {fileID: 11400000, guid: 66906e72e4d8c4b45a796d060ec71e58, type: 2}
+  - {fileID: 11400000, guid: 06420adae94fe404a830405fa12ef1f9, type: 2}
+  - {fileID: 11400000, guid: 9ec91b9d5216a0a4e8bed13cf698d3c9, type: 2}
+  - {fileID: 11400000, guid: 77ce18fff730158459e2de614b40bae7, type: 2}
+  - {fileID: 11400000, guid: 0eb5e1867a29b8e49bf69fe209534ccc, type: 2}
   currEVENT: {fileID: 0}
   currentEventNumber: 0
 --- !u!1 &3088789114228133941
