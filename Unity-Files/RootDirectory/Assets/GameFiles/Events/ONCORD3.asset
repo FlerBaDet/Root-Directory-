@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9f1b7949130274ba1f163f17144a9e, type: 3}
+  m_Name: ONCORD3
+  m_EditorClassIdentifier: 
+  author: BossMan97
+  date: 2/5/2025 | 10:10AM
+  message: "\nHello employee #247, \n\nWelcome to your new position in the company!\n\nHere
+    you will be managing people's computers,\n\nI will send you messages with tasks
+    to complete\n\nin the office directory. \n\n\nAs a sort of practice, lets try
+    copying\n\na photo of an apple in your pictures\n\nfolder and pasting it in your
+    videos folder.\n"
+  lineBreaks: 15
+  eventNumber: 0
+  command: PST
+  location: {fileID: 11400000, guid: 5a34d0e8b7482f84f8b0f5d5baf4996e, type: 2}
+  file: {fileID: 11400000, guid: cf20e6ba12b305b4c8aacb6ae1b38790, type: 2}
+  completed: 0

@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa9f1b7949130274ba1f163f17144a9e, type: 3}
+  m_Name: ONCORD1
+  m_EditorClassIdentifier: 
+  author: BossMan97
+  date: 2/5/2025 | 10:10AM
+  message: "\nGreat Job, it's almost like you work here\n\nor something! haha\n\n\nYour
+    next practice, try deleting that apple\n\nimage from your videos folder, because
+    \n\nthat's kinda silly you put it in there...\n\nanyways, don't forget about
+    the txt file\n\nin your documents, it should be called\n\n\"HowToSod.txt\" that'll
+    teach you about\n\nother commands. GL Cya.\n\n"
+  lineBreaks: 19
+  eventNumber: 1
+  command: DEL
+  location: {fileID: 11400000, guid: 5a34d0e8b7482f84f8b0f5d5baf4996e, type: 2}
+  file: {fileID: 11400000, guid: cf20e6ba12b305b4c8aacb6ae1b38790, type: 2}
+  completed: 0

@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Sod-OS/DIR")]
 public class Directory : ScriptableObject
 {
+    
+    public string admin;
     [TextArea]
     public string path;
     public string keyword;

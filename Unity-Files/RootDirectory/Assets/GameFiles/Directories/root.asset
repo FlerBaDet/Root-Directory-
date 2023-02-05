@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6c2ec1a2c442e643820f5e00a5efaeb, type: 3}
   m_Name: root
   m_EditorClassIdentifier: 
+  admin: 
   path: root/
   keyword: root
-  previousDirectory: {fileID: 0}
+  previousDirectory: {fileID: 11400000}
   paths:
   - keyString: home
     pathDesc: 
@@ -22,4 +23,7 @@ MonoBehaviour:
   - keyString: office
     pathDesc: 
     nextDirectory: {fileID: 11400000, guid: 6e43334743f041a4593cbe46cc2155f1, type: 2}
+  - keyString: classified
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 787994d26fd50c542a0d82f6102e4bbf, type: 2}
   files: []

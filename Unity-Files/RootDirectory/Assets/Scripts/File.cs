@@ -12,5 +12,6 @@ public abstract class File : ScriptableObject
     public bool deleted;
 
     public abstract void Open(OSController controller);
+    public abstract void Open(OSController controller, EventManager eventManager);
     public abstract void Delete(OSController controller);
 }
