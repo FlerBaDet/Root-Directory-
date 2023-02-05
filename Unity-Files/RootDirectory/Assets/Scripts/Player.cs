@@ -8,12 +8,13 @@ public class Player : MonoBehaviour
 {
     Rigidbody2D rb;
 
+    float inputHorizontal;
     public float moveSpeed = 3f;
     public bool facingRight = true;
     public bool canPlayPong = false;
     public bool canLoadOS = false;
 
-    float inputHorizontal;
+    AudioSource audioData;
 
     // Start is called before the first frame update
     void Start()

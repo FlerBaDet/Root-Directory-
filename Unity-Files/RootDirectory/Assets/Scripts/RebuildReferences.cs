@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEditor;
+using UnityEngine.Windows;
 
 public class RebuildReferences : MonoBehaviour
 {
@@ -43,15 +45,22 @@ public class RebuildReferences : MonoBehaviour
     {
         //Debug.Log(path);
         if (!directory.paths.Count.Equals(0)) {
-            foreach (Paths paths in directory.paths)
+            for (int i = 0; i < directory.paths.Count; i++)
             {
-                directory.paths.Remove(paths);
-                directory.paths.Add(new Paths());
-                paths.nextDirectory = Resources.Load<Directory>(path + "/" + paths.keyString + "/" + paths.keyString);
-                paths.keyString = paths.nextDirectory.keyword;
-                paths.nextDirectory.previousDirectory = directory;
-                resetPaths(path + "/" + paths.keyString, paths.nextDirectory);
-                resetFiles(path, paths.nextDirectory);
+                Paths oldPath = directory.paths[i];
+                directory.paths.RemoveAt(i);
+
+                //Resources.Load<File>(path + "/" + oldPath.keyString + "/" + oldPath.keyString).Move(oldPath.keyString, oldPath.keyString + ",");
+                Directory nextDirectory = Resources.Load<Directory>(path + "/" + oldPath.keyString + "/" + oldPath.keyString);
+                string key = nextDirectory.keyword;
+                Paths newPath = new Paths(key, nextDirectory);
+                directory.paths.Add(newPath);
+                
+
+                newPath.nextDirectory.previousDirectory = directory;
+
+                resetPaths(path + "/" + newPath.keyString, newPath.nextDirectory);
+                resetFiles(path + "/" + newPath.keyString, newPath.nextDirectory);
             }
         }
         else

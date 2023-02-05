@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 4b9cad765e87cd448839cca22593b1fc
+<<<<<<< Updated upstream:Unity-Files/RootDirectory/Assets/Resources/DirectoriesSAVE/home/media/pictures/pictures.asset.meta
+guid: 9ffe08fd38bbe33419abab7ae141fa02
+=======
+guid: 5e045e82cb3dd37478a07dea0a064765
+>>>>>>> Stashed changes:Unity-Files/RootDirectory/Assets/GameFiles/DirectoriesSAVE/home/media/pictures/pictures.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: cbf2eddf0d480ce429bf00f7e6e4d2c4
+<<<<<<< Updated upstream:Unity-Files/RootDirectory/Assets/Resources/DirectoriesSAVE/home/media/pictures/messi.asset.meta
+guid: 55f50801c1bb2324783b7384352b42e1
+=======
+guid: 1ea504af4df0ca347940cd04238a5384
+>>>>>>> Stashed changes:Unity-Files/RootDirectory/Assets/GameFiles/DirectoriesSAVE/home/media/pictures/messi.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000

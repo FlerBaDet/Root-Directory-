@@ -9,4 +9,10 @@ public class Paths
     public string keyString;
     public string pathDesc;
     public Directory nextDirectory;
+    public Paths(string keyStringI, Directory nextDirectoryI)
+    {
+        keyString = keyStringI;
+        nextDirectory = nextDirectoryI;
+    }
+    
 }

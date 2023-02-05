@@ -19,4 +19,7 @@ MonoBehaviour:
   - keyString: home
     pathDesc: 
     nextDirectory: {fileID: 11400000, guid: 12a820adef028d5459ee3cbde3245544, type: 2}
+  - keyString: office
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 6e43334743f041a4593cbe46cc2155f1, type: 2}
   files: []

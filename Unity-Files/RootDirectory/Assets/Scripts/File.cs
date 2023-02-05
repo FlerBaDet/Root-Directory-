@@ -9,6 +9,7 @@ public abstract class File : ScriptableObject
     public string path;
     public string keyword;
     public string type;
+    public bool deleted;
 
     public abstract void Open(OSController controller);
     public abstract void Delete(OSController controller);

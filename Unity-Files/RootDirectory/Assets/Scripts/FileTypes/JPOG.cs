@@ -1,6 +1,7 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,7 +9,13 @@ using UnityEngine.UI;
 public class JPOG : File
 {
     public Sprite image;
+    
     GenerateImage imageDisplay;
+
+    private void Awake()
+    {
+        deleted = false;
+    }
     public override void Open(OSController controller)
     {
         imageDisplay = controller.imageDisplay;

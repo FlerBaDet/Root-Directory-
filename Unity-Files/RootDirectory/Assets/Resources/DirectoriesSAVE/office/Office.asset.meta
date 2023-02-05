@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: 3ec7629162c1bdf4e92c59a2532d0f28
+<<<<<<< Updated upstream:Unity-Files/RootDirectory/Assets/Resources/DirectoriesSAVE/office/Office.asset.meta
+guid: 22256575b63b7c7479fb8413f15daf94
+=======
+guid: 5a0e071ed85097a4bb2b8691fc47f5c0
+>>>>>>> Stashed changes:Unity-Files/RootDirectory/Assets/GameFiles/DirectoriesSAVE/office/Office.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
