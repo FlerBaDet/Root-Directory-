@@ -23,6 +23,11 @@ public class JPOG : File
 
     }
 
+    public override void Open(OSController controller, EventManager eventManager)
+    {
+        throw new System.NotImplementedException();
+    }
+
     public override void Delete(OSController controller)
     {
         

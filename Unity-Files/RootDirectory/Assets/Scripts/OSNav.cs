@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -9,6 +10,7 @@ public class OSNav : MonoBehaviour
     public Directory currentDirectory;
     public Directory root;
     public File copiedFile;
+    public bool isAdmin = false;
     public int imageMoveRate = 7;
     public int imageTransRate = 14;
     public int imageFollowRate = 38;
@@ -16,13 +18,16 @@ public class OSNav : MonoBehaviour
     bool openSucc = false;
     bool copySucc = false;
     bool pasteFail = false;
+    bool cutSucc = false;
 
     Dictionary<string, Directory> pathDictionary = new Dictionary<string, Directory> ();
     OSController controller;
+    EventManager EM;
 
     private void Awake()
     {
         controller = GetComponent<OSController>();
+        EM = GetComponent<EventManager>();
         //currentDirectory = Resources.Load("Assets/GameFiles/DirectoriesSAVE/root") as Directory;
     }
 
@@ -38,19 +43,25 @@ public class OSNav : MonoBehaviour
         {
             foreach (Paths path in currentDirectory.paths)
             {
-                pathDictionary.Add(path.keyString, path.nextDirectory);
-                controller.interactionDescriptionsInDirectory.Add(path.pathDesc);
+                if (path != null)
+                {
+                    pathDictionary.Add(path.keyString, path.nextDirectory);
+                    controller.interactionDescriptionsInDirectory.Add(path.pathDesc);
+                }
             }
             
         }
 
         pathDictionary.Add(currentDirectory.previousDirectory.keyword, currentDirectory.previousDirectory);
-        pathDictionary.Add(root.keyword, root);
+        if (currentDirectory != root && !pathDictionary.ContainsValue(root))
+        {
+            pathDictionary.Add(root.keyword, root);
+        }
     }
 
     public void AttemptToChangeDirectories(string directoryName) //CD
     {
-        if (directoryName == currentDirectory.previousDirectory.keyword | pathDictionary.ContainsKey(directoryName))
+        if (directoryName.ToLower() == currentDirectory.previousDirectory.keyword.ToLower() | pathDictionary.ContainsKey(directoryName))
         {
             currentDirectory = pathDictionary[directoryName];
             controller.LogStringWithReturn("============================");
@@ -58,7 +69,8 @@ public class OSNav : MonoBehaviour
         }
         else
         {
-            controller.LogStringWithReturn("Directory '" + directoryName + "' does not exist" + "\n");
+            controller.LogStringWithReturn("Directory '" + directoryName + "' does not exist");
+            controller.LogStringWithReturn("============================");
         }
     }
 
@@ -68,16 +80,22 @@ public class OSNav : MonoBehaviour
         {
             foreach (Paths path in currentDirectory.paths)
             {
-                controller.LogStringWithReturn(path.keyString);
+                if (path != null)
+                {
+                    controller.LogStringWithReturn(path.keyString);
+                }
             }
         }
         if (currentDirectory.files.Count > 0)
         {
             foreach (File file in currentDirectory.files)
             {
-                if (!file.deleted)
+                if (file != null)
                 {
-                    controller.LogStringWithReturn(file.keyword);
+                    if (!file.deleted)
+                    {
+                        controller.LogStringWithReturn(file.keyword);
+                    }
                 }
             }
         }
@@ -92,10 +110,20 @@ public class OSNav : MonoBehaviour
         {
             foreach (File file in currentDirectory.files)
             {
-                if (file.keyword.ToLower() == separatedInputWords[1].ToLower())
+                if (file != null)
                 {
-                    file.Open(controller);
-                    openSucc = true;
+                    if (file.keyword.ToLower() == separatedInputWords[1].ToLower())
+                    {
+                        if (file.type == "jpog" || file.type == "txt")
+                        {
+                            file.Open(controller);
+                        }
+                        else if (file.type == "exe")
+                        {
+                            file.Open(controller, EM);
+                        }
+                        openSucc = true;
+                    }
                 }
             }
         }
@@ -111,19 +139,22 @@ public class OSNav : MonoBehaviour
         controller.DisplayDirectory();
     }
 
-    public void DeleteFile(string[] separatedInputWords)
+    public void DeleteFile(string[] separatedInputWords) //DEL
     {
         if (currentDirectory.files.Count > 0)
         {
             foreach (File file in currentDirectory.files)
             {
-                if (file.keyword.ToLower() == separatedInputWords[1].ToLower() && !file.deleted)
+                if (file != null)
                 {
-                    //currentDirectory.files.Remove(file);
-                    file.deleted = true;
-                    controller.LogStringWithReturn("Deleted File: " + separatedInputWords[1]);
-                    deleteSucc = true;
-                    break;
+                    if (file.keyword.ToLower() == separatedInputWords[1].ToLower() && !file.deleted)
+                    {
+                        EM.EventCheck(controller, separatedInputWords[0], file);
+                        file.deleted = true;
+                        controller.LogStringWithReturn("Deleted File: " + separatedInputWords[1]);
+                        deleteSucc = true;
+                        break;
+                    }
                 }
             }
         }
@@ -146,13 +177,16 @@ public class OSNav : MonoBehaviour
         {
             foreach (File file in currentDirectory.files)
             {
-                if (file.keyword.ToLower() == separatedInputWords[1].ToLower() && !file.deleted)
+                if (file != null)
                 {
-                    //currentDirectory.files.Remove(file);
-                    copiedFile = Instantiate(file);
-                    controller.LogStringWithReturn("Copied File: " + separatedInputWords[1]);
-                    copySucc = true;
-                    break;
+                    if (file.keyword.ToLower() == separatedInputWords[1].ToLower() && !file.deleted)
+                    {
+                        EM.EventCheck(controller, separatedInputWords[0], file);
+                        copiedFile = Instantiate(file);
+                        controller.LogStringWithReturn("Copied File: " + separatedInputWords[1]);
+                        copySucc = true;
+                        break;
+                    }
                 }
             }
         }
@@ -173,17 +207,20 @@ public class OSNav : MonoBehaviour
     {
         foreach (File file in currentDirectory.files)
         {
-            if (file.keyword.ToLower() == separatedInputWords[1].ToLower() && !file.deleted)
+            if (file != null)
             {
-                controller.LogStringWithReturn(separatedInputWords[1] + " already exists here");
-                pasteFail = true;
-                break;
+                if (file.keyword.ToLower() == separatedInputWords[1].ToLower() && !file.deleted)
+                {
+                    controller.LogStringWithReturn(separatedInputWords[1] + " already exists here");
+                    pasteFail = true;
+                    break;
+                }
             }
         }
         
         if (!pasteFail)
         {
-            
+            EM.EventCheck(controller, separatedInputWords[0], copiedFile);
             currentDirectory.files.Add(copiedFile);
             controller.LogStringWithReturn("Pasted File: " + separatedInputWords[1]);
         }
@@ -195,6 +232,65 @@ public class OSNav : MonoBehaviour
         controller.LogStringWithReturn("============================");
         controller.DisplayDirectory();
     }
+
+    public void CutFile(string[] separatedInputWords)
+    {
+        if (currentDirectory.files.Count > 0)
+        {
+            foreach (File file in currentDirectory.files)
+            {
+                if (file != null)
+                {
+                    if (file.keyword.ToLower() == separatedInputWords[1].ToLower() && !file.deleted)
+                    {
+                        EM.EventCheck(controller, separatedInputWords[0], file);
+                        copiedFile = Instantiate(file);
+                        //controller.LogStringWithReturn("Copied File: " + separatedInputWords[1]);
+                        cutSucc = true;
+                        break;
+                    }
+                }
+            }
+        }
+        if (!cutSucc)
+        {
+            controller.LogStringWithReturn("File '" + separatedInputWords[1] + "' was not found");
+        }
+        else
+        {
+            if (currentDirectory.files.Count > 0)
+            {
+                foreach (File file in currentDirectory.files)
+                {
+                    if (file != null)
+                    {
+                        if (file.keyword.ToLower() == separatedInputWords[1].ToLower() && !file.deleted)
+                        {
+                            EM.EventCheck(controller, separatedInputWords[0], file);
+                            file.deleted = true;
+                            controller.LogStringWithReturn("Cut File: " + separatedInputWords[1]);
+                            break;
+                        }
+                    }
+                }
+            }
+            cutSucc = false;
+        }
+
+        
+
+        controller.LogStringWithReturn("============================");
+        controller.DisplayDirectory();
+    }
+
+    public void AdminMode(string[] separetedInputWords)
+    {
+        if (separetedInputWords[1].ToLower() == "hotstuff68")
+        {
+            isAdmin = true;
+        }
+    }
+
 
     public void ClearScreen() //CLS
     {

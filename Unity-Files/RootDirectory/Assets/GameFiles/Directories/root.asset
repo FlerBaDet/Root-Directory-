@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: root/
   keyword: root
-  previousDirectory: {fileID: 0}
+  previousDirectory: {fileID: 11400000}
   paths:
   - keyString: home
     pathDesc: 
