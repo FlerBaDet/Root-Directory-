@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6c2ec1a2c442e643820f5e00a5efaeb, type: 3}
+  m_Name: personal
+  m_EditorClassIdentifier: 
+  admin: 
+  path: root/office/steph/personal
+  keyword: personal
+  previousDirectory: {fileID: 11400000, guid: 32a5f4791c811a143a7db50456c9bf72, type: 2}
+  paths:
+  - keyString: memes
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 8ee7a04c477b4dd488edac9ef7870b28, type: 2}
+  - keyString: music
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 359972672b834f640a4f007947cae9b7, type: 2}
+  - keyString: photos
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 7ccdd9e75c34a99429843442795bbb3c, type: 2}
+  files: []
