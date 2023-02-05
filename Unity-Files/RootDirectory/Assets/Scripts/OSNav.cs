@@ -7,11 +7,15 @@ using UnityEngine;
 public class OSNav : MonoBehaviour
 {
     public Directory currentDirectory;
+    public Directory root;
+    public File copiedFile;
     public int imageMoveRate = 7;
     public int imageTransRate = 14;
     public int imageFollowRate = 38;
     bool deleteSucc = false;
     bool openSucc = false;
+    bool copySucc = false;
+    bool pasteFail = false;
 
     Dictionary<string, Directory> pathDictionary = new Dictionary<string, Directory> ();
     OSController controller;
@@ -41,7 +45,7 @@ public class OSNav : MonoBehaviour
         }
 
         pathDictionary.Add(currentDirectory.previousDirectory.keyword, currentDirectory.previousDirectory);
-
+        pathDictionary.Add(root.keyword, root);
     }
 
     public void AttemptToChangeDirectories(string directoryName) //CD
@@ -136,6 +140,60 @@ public class OSNav : MonoBehaviour
         controller.DisplayDirectory();
     }
 
+    public void CopyFile(string[] separatedInputWords)
+    {
+        if (currentDirectory.files.Count > 0)
+        {
+            foreach (File file in currentDirectory.files)
+            {
+                if (file.keyword.ToLower() == separatedInputWords[1].ToLower())
+                {
+                    //currentDirectory.files.Remove(file);
+                    copiedFile = Instantiate(file);
+                    controller.LogStringWithReturn("Copied File: " + separatedInputWords[1]);
+                    copySucc = true;
+                    break;
+                }
+            }
+        }
+        if (!copySucc)
+        {
+            controller.LogStringWithReturn("File '" + separatedInputWords[1] + "' was not found");
+        }
+        else
+        {
+            copySucc = false;
+        }
+
+        controller.LogStringWithReturn("============================");
+        controller.DisplayDirectory();
+    }
+
+    public void PasteFile(string[] separatedInputWords)
+    {
+        foreach (File file in currentDirectory.files)
+        {
+            if (file.keyword.ToLower() == separatedInputWords[1].ToLower())
+            {
+                controller.LogStringWithReturn(separatedInputWords[1] + " already exists here");
+                pasteFail = true;
+                break;
+            }
+        }
+        
+        if (!pasteFail)
+        {
+            
+            currentDirectory.files.Add(copiedFile);
+        }
+        else
+        {
+            pasteFail = false;
+        }
+
+        controller.LogStringWithReturn("============================");
+        controller.DisplayDirectory();
+    }
 
     public void ClearScreen() //CLS
     {
