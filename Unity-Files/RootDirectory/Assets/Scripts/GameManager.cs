@@ -23,13 +23,10 @@ public class GameManager : MonoBehaviour
     }
 
     // Update is called once per frame
+    [System.Obsolete]
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Debug.Log("Escape");
-            SceneManager.LoadScene(0);
-        }
+
     }
 
     public void PlayerScores()
