@@ -7,6 +7,8 @@ public class BouncySurface : MonoBehaviour
 
     public float bounceStrength;
 
+    AudioSource audio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class BouncySurface : MonoBehaviour
         {
             Vector2 normal = collision.GetContact(0).normal;
             ball.AddForce(-normal * this.bounceStrength);
+            audio.Play();
         }
     }
 

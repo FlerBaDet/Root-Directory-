@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ColliderManager3 : MonoBehaviour
 {
@@ -35,21 +36,20 @@ public class ColliderManager3 : MonoBehaviour
         }
     }
 
-    public void unSee()
+    public void DisableInput()
     {
-        foreach (GameObject obj in needScript)
+        foreach(GameObject obj in needScript)
         {
-            obj.GetComponent<Collider2D>().enabled = false;
-            obj.GetComponent<SpriteRenderer>().enabled = false;
+            obj.GetComponent<InputField>().interactable = false;
+        }
+    }
+    
+    public void EnableInput()
+    {
+        foreach(GameObject obj in needScript)
+        {
+            obj.GetComponent<InputField>().interactable = true;
         }
     }
 
-    public void See()
-    {
-        foreach (GameObject obj in needScript)
-        {
-            obj.GetComponent<Collider2D>().enabled = true;
-            obj.GetComponent<SpriteRenderer>().enabled = true;
-        }
-    }
 }
