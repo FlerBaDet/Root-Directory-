@@ -9,13 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c2ec1a2c442e643820f5e00a5efaeb, type: 3}
-  m_Name: memes_sarah
+  m_Script: {fileID: 11500000, guid: dcbcc2bfa7f7f584599be183b527bae6, type: 3}
+  m_Name: hahaha
   m_EditorClassIdentifier: 
-  admin: 
   path: root/office/sarah/personal/memes
-  keyword: memes
-  previousDirectory: {fileID: 11400000, guid: 236e6946c29ce5d47bd57cbf32edfaa0, type: 2}
-  paths: []
-  files:
-  - {fileID: 11400000, guid: 8f29039e99e439a45a56a3fb412a499d, type: 2}
+  keyword: hahaha.jpog
+  type: jpog
+  deleted: 0
+  image: {fileID: 21300000, guid: faa2b5d5a4958ae4b8fedbde974b6e24, type: 3}

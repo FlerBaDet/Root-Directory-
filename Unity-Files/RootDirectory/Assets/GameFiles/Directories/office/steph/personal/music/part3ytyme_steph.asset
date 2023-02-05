@@ -9,13 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c2ec1a2c442e643820f5e00a5efaeb, type: 3}
-  m_Name: music
+  m_Script: {fileID: 11500000, guid: 7fc365b7c8f4b594d8c45c5afc814b89, type: 3}
+  m_Name: part3ytyme_steph
   m_EditorClassIdentifier: 
-  admin: 
   path: root/office/steph/personal/music
-  keyword: music
-  previousDirectory: {fileID: 11400000, guid: 0685f236ffe5b9e4db7a2910373353ff, type: 2}
-  paths: []
-  files:
-  - {fileID: 11400000, guid: cce71910866362f458d7dca4b925ae98, type: 2}
+  keyword: part3ytyme.mp3
+  type: mp3
+  deleted: 0

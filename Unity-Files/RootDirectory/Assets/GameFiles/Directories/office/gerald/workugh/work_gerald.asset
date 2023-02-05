@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c6c2ec1a2c442e643820f5e00a5efaeb, type: 3}
-  m_Name: workugh
+  m_Script: {fileID: 11500000, guid: 16acc9b97d263c24c983dab037dea569, type: 3}
+  m_Name: work_gerald
   m_EditorClassIdentifier: 
-  admin: 
   path: root/office/gerald/workugh
-  keyword: workugh
-  previousDirectory: {fileID: 11400000, guid: db1b1532d08e47b43912571b55ddee79, type: 2}
-  paths: []
-  files:
-  - {fileID: 11400000, guid: 6eadbf550f50dfc4aa806888ce3e25e3, type: 2}
+  keyword: work.txt
+  type: txt
+  deleted: 0
+  txtFileContents: I, Carlos Manous, am a criminal
+  lineBreaks: 2
