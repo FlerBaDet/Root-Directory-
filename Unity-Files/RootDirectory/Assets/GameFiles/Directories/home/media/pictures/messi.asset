@@ -15,5 +15,5 @@ MonoBehaviour:
   path: root/home/media/pictures/messi.jpog
   keyword: messi.jpog
   type: jpog
+  deleted: 0
   image: {fileID: 21300000, guid: 70bceb6107bbc5946b26d5026e26e1ee, type: 3}
-  imageDisplay: {fileID: 0}

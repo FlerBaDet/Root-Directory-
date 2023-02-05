@@ -37,12 +37,16 @@ public class OSNav : MonoBehaviour
                 pathDictionary.Add(path.keyString, path.nextDirectory);
                 controller.interactionDescriptionsInDirectory.Add(path.pathDesc);
             }
+            
         }
+
+        pathDictionary.Add(currentDirectory.previousDirectory.keyword, currentDirectory.previousDirectory);
+
     }
 
     public void AttemptToChangeDirectories(string directoryName) //CD
     {
-        if (pathDictionary.ContainsKey(directoryName))
+        if (directoryName == currentDirectory.previousDirectory.keyword | pathDictionary.ContainsKey(directoryName))
         {
             currentDirectory = pathDictionary[directoryName];
             controller.LogStringWithReturn("============================");
@@ -67,7 +71,10 @@ public class OSNav : MonoBehaviour
         {
             foreach (File file in currentDirectory.files)
             {
-                controller.LogStringWithReturn(file.keyword);
+                if (!file.deleted)
+                {
+                    controller.LogStringWithReturn(file.keyword);
+                }
             }
         }
         controller.LogStringWithReturn("============================");
@@ -106,9 +113,10 @@ public class OSNav : MonoBehaviour
         {
             foreach (File file in currentDirectory.files)
             {
-                if (file.keyword.ToLower() == separatedInputWords[1].ToLower())
+                if (file.keyword.ToLower() == separatedInputWords[1].ToLower() && !file.deleted)
                 {
-                    currentDirectory.files.Remove(file);
+                    //currentDirectory.files.Remove(file);
+                    file.deleted = true;
                     controller.LogStringWithReturn("Deleted File: " + separatedInputWords[1]);
                     deleteSucc = true;
                     break;

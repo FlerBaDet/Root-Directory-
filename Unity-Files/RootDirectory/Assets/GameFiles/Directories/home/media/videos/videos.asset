@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   path: root/home/media/videos
   keyword: videos
-  previousDirectory: {fileID: 0}
+  previousDirectory: {fileID: 11400000, guid: d69633e60b150f248b6e81d82d4dbac9, type: 2}
   paths: []
   files: []

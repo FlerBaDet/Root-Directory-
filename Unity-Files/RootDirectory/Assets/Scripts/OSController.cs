@@ -21,7 +21,7 @@ public class OSController : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        if (!System.IO.Directory.Exists("Assets/Resources/DirectoriesSAVE"))
+        /*if (!System.IO.Directory.Exists("Assets/Resources/DirectoriesSAVE"))
         {
             FileUtil.CopyFileOrDirectory("Assets/GameFiles/Directories", "Assets/Resources/DirectoriesSAVE");
         }
@@ -30,9 +30,9 @@ public class OSController : MonoBehaviour
             
             FileUtil.DeleteFileOrDirectory("Assets/Resources/DirectoriesSAVE");
             FileUtil.CopyFileOrDirectory("Assets/GameFiles/Directories", "Assets/Resources/DirectoriesSAVE");
-        }
+        }*/
         osNav = GetComponent<OSNav>();
-        osNav.currentDirectory = Resources.Load<Directory>("DirectoriesSAVE/root");
+        //osNav.currentDirectory = Resources.Load<Directory>("DirectoriesSAVE/root");
     }
 
     private void Start()
