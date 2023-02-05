@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a92d72cd1038044c915718a3070542a
-      internalID: 1176036735
+      spriteID: 86f14ee4374be3842b6bcd6a7e7a951a
+      internalID: -1117822706
       vertices: []
       indices: 
       edges: []
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 92143eed923622347b2423a0f7755762
-      internalID: 378984448
+      spriteID: 19aedc8e960827b4788c38f629a9d21c
+      internalID: -1513063595
       vertices: []
       indices: 
       edges: []
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ccdb0d2dd582ca499d2660d3bc4ae39
-      internalID: -560267556
+      spriteID: 5b12e4e3a3cb7494ab6752602f2d3e60
+      internalID: 1112508099
       vertices: []
       indices: 
       edges: []
@@ -205,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a57b51e1acf48a54594ef20d7ba7b8a5
-      internalID: -2010513858
+      spriteID: d4abd96d2cbaa95458024028986347a1
+      internalID: 60741675
       vertices: []
       indices: 
       edges: []
@@ -226,8 +226,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7783c7f1c9cb15a4598c3ea6d417a694
-      internalID: -828769685
+      spriteID: 7ecb4e3fd3a7eee4490f1e759632f458
+      internalID: 1464925307
       vertices: []
       indices: 
       edges: []
@@ -247,8 +247,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd218747e7d466347a3eaeaf88d12779
-      internalID: 886932382
+      spriteID: 740aba3627ca45f40897e83e5edcb6d1
+      internalID: -13096652
       vertices: []
       indices: 
       edges: []
@@ -268,8 +268,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a83ef93ceca0d57418e42c8d55634f3f
-      internalID: -236151316
+      spriteID: 53eae438600d84f40b6aaae3ad503644
+      internalID: 1351668197
       vertices: []
       indices: 
       edges: []
@@ -289,8 +289,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5305eb7e7dfcf63449b4f77efb46651f
-      internalID: -1744018611
+      spriteID: 9bc0fc0a7cb89b84e94adfe9989aee78
+      internalID: -167780003
       vertices: []
       indices: 
       edges: []
@@ -310,8 +310,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11a42c94cc45e6b4e9955a695bb5a564
-      internalID: -1397547182
+      spriteID: 6c48626bcbd3e9d4e880e06e5fb98850
+      internalID: -47007423
       vertices: []
       indices: 
       edges: []
@@ -331,8 +331,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cfcb5d7a539e09b4c9d8055fcffbfbdc
-      internalID: 3491097
+      spriteID: 20b43f6e3e2728e4eae5c639d74f08dd
+      internalID: -1107961870
       vertices: []
       indices: 
       edges: []
@@ -352,8 +352,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19071623ec8530145be042e0081b9f1b
-      internalID: 1791937114
+      spriteID: 7e2b697b9336059478a0b7556230f1c0
+      internalID: -1675714465
       vertices: []
       indices: 
       edges: []
@@ -373,8 +373,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76b12f73aa588d7479ba085e1a4e0350
-      internalID: -1309317149
+      spriteID: e9d3f11150e750d4b8d6de4c2f6d9033
+      internalID: 108896206
       vertices: []
       indices: 
       edges: []
@@ -390,18 +390,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      CoffeeAnim_2: -560267556
-      CoffeeAnim_10: 1791937114
-      CoffeeAnim_1: 378984448
-      CoffeeAnim_3: -2010513858
-      CoffeeAnim_8: -1397547182
-      CoffeeAnim_11: -1309317149
-      CoffeeAnim_0: 1176036735
-      CoffeeAnim_6: -236151316
-      CoffeeAnim_7: -1744018611
-      CoffeeAnim_9: 3491097
-      CoffeeAnim_4: -828769685
-      CoffeeAnim_5: 886932382
+      CoffeeAnim_2: 1112508099
+      CoffeeAnim_10: -1675714465
+      CoffeeAnim_1: -1513063595
+      CoffeeAnim_3: 60741675
+      CoffeeAnim_8: -47007423
+      CoffeeAnim_11: 108896206
+      CoffeeAnim_0: -1117822706
+      CoffeeAnim_6: 1351668197
+      CoffeeAnim_7: -167780003
+      CoffeeAnim_9: -1107961870
+      CoffeeAnim_4: 1464925307
+      CoffeeAnim_5: -13096652
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
