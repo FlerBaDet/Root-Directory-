@@ -14,7 +14,7 @@ public class IsMouseHovering : MonoBehaviour
     }
     private void OnMouseOver()
     {
-        Outline.SetFloat
+        //Outline.SetFloat;
     }
     private void OnMouseExit()
     {
