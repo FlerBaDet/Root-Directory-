@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Build;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,6 +15,8 @@ public class Player : MonoBehaviour
     public bool canPlayPong = false;
     public bool canLoadOS = false;
 
+    public bool playedPong = false;
+
     public bool inOffice = true;
     public bool playingPong = false;
     public bool inOS = false;
@@ -21,6 +24,7 @@ public class Player : MonoBehaviour
     public ColliderManager colliderManager;
     public ColliderManager2 colliderManager2;
     public ColliderManager3 colliderManager3;
+    public Ball ball;
 
     public AudioSource audioData;
 
@@ -79,6 +83,7 @@ public class Player : MonoBehaviour
                 Debug.Log("Escape");
                 loadOffice();
                 unloadPong();
+                playedPong = true;
             }
         }
 
@@ -93,6 +98,13 @@ public class Player : MonoBehaviour
         }
 
     }
+
+    public void disableOS()
+    {
+        loadOffice();
+        unloadOS();
+    }
+
     void flip()
     {
         Vector3 currentScale = gameObject.transform.localScale;
@@ -129,14 +141,16 @@ public class Player : MonoBehaviour
 
     void loadOS()
     {
+        
         colliderManager3.turnOn();
-        colliderManager3.See();
+        colliderManager3.EnableInput();
     }
 
     void unloadOS()
     {
+        colliderManager3.DisableInput();
         colliderManager3.turnOff();
-        colliderManager3.unSee();
+        
     }
 
     void unloadOffice()
@@ -161,6 +175,11 @@ public class Player : MonoBehaviour
     void loadPong()
     {
         colliderManager2.turnOn();
+        if (playedPong == true)
+        {
+            ball.AddStartingForce();
+        }
+        
     }
 
 }

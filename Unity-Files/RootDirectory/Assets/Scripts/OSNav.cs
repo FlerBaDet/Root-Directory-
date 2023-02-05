@@ -9,6 +9,7 @@ public class OSNav : MonoBehaviour
 {
     public Directory currentDirectory;
     public Directory root;
+    public Player player;
     public File copiedFile;
     public bool isAdmin = false;
     public int imageMoveRate = 7;
@@ -311,6 +312,15 @@ public class OSNav : MonoBehaviour
         controller.DisplayDirectory();
     }
 
+    public void ShutDown(string[] words)
+    {
+        if (words[0].ToLower() == "shutdown")
+        {
+            controller.LogStringWithReturn("SHUTTINGDOWN...");
+            controller.LogStringWithReturn(divider);
+            player.disableOS();
+        }
+    }
 
     public void ClearScreen() //CLS
     {
