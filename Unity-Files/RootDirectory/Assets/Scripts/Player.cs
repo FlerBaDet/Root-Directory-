@@ -32,6 +32,7 @@ public class Player : MonoBehaviour
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
+        audioData.Play();
     }
 
     // Update is called once per frame
