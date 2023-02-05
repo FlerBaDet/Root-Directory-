@@ -10,14 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6c2ec1a2c442e643820f5e00a5efaeb, type: 3}
-  m_Name: Office
+  m_Name: hot_gerald
   m_EditorClassIdentifier: 
   admin: 
-  path: root/office
-  keyword: office
-  previousDirectory: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
-  paths:
-  - keyString: steph
-    pathDesc: 
-    nextDirectory: {fileID: 11400000, guid: 32a5f4791c811a143a7db50456c9bf72, type: 2}
+  path: root/office/gerald/ohhyeah/hot
+  keyword: hot
+  previousDirectory: {fileID: 11400000, guid: 1954db077a4f8024ea9030ecf53a5af2, type: 2}
+  paths: []
   files: []

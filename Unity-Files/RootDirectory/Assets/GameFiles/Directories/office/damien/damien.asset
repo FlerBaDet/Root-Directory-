@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6c2ec1a2c442e643820f5e00a5efaeb, type: 3}
-  m_Name: Office
+  m_Name: damien
   m_EditorClassIdentifier: 
   admin: 
-  path: root/office
-  keyword: office
-  previousDirectory: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
+  path: root/office/damien
+  keyword: damien
+  previousDirectory: {fileID: 11400000, guid: 6e43334743f041a4593cbe46cc2155f1, type: 2}
   paths:
-  - keyString: steph
+  - keyString: workstuff
     pathDesc: 
-    nextDirectory: {fileID: 11400000, guid: 32a5f4791c811a143a7db50456c9bf72, type: 2}
+    nextDirectory: {fileID: 11400000, guid: 4b9f90acae697cc4c8cba493f066db96, type: 2}
+  - keyString: mystuff
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 14294622d3dfbf04eb5f4e70b0df5460, type: 2}
   files: []

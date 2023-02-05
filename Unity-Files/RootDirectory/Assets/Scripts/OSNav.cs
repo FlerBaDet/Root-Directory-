@@ -135,6 +135,11 @@ public class OSNav : MonoBehaviour
                         {
                             file.Open(controller, EM);
                         }
+                        else
+                        {
+                            controller.LogStringWithReturn("This file cannot be opened");
+                            controller.LogStringWithReturn(divider);
+                        }
                         openSucc = true;
                     }
                 }
