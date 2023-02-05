@@ -8,6 +8,7 @@ public class ColliderManager : MonoBehaviour
     public List<GameObject> gameObjs = new List<GameObject>();
     public List<GameObject> needScript = new List<GameObject>();
     public GameObject player;
+    public GameObject animation;
 
     // Start is called before the first frame update
     void Start()
@@ -67,6 +68,16 @@ public class ColliderManager : MonoBehaviour
         player.GetComponent<BoxCollider2D>().enabled = false;
         player.GetComponent<CircleCollider2D>().enabled = false;
         player.GetComponent<SpriteRenderer>().enabled = false;
+    }
+
+    public void showAnimation()
+    {
+        animation.GetComponent<SpriteRenderer>().enabled = true;
+    }
+
+    public void unshowAnimation()
+    {
+        animation.GetComponent<SpriteRenderer>().enabled = false;
     }
 
 }

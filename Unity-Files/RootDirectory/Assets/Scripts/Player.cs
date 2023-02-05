@@ -59,7 +59,7 @@ public class Player : MonoBehaviour
 
         if (canPlayPong == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetMouseButtonDown(0))
             {
                 unloadOffice();
                 loadPong();
@@ -69,7 +69,7 @@ public class Player : MonoBehaviour
         }
         else if (canLoadOS == true)
         {
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetMouseButtonDown(0))
             {
                 Debug.Log("Open OS");
                 unloadOffice();
@@ -159,6 +159,7 @@ public class Player : MonoBehaviour
         colliderManager.unshowPlayer();
         colliderManager.turnOff();
         colliderManager.unSee();
+        colliderManager.unshowAnimation();
     }
 
     public void loadOffice()
@@ -166,6 +167,7 @@ public class Player : MonoBehaviour
         colliderManager.showPlayer();
         colliderManager.turnOn();
         colliderManager.See();
+        colliderManager.showAnimation();
     }
 
     [System.Obsolete]

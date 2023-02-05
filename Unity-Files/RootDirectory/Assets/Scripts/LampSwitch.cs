@@ -12,16 +12,8 @@ public class LampSwitch : MonoBehaviour
     AudioSource m_AudioSource;
     bool m_switch;
     
-
-    private void Start()
-    {
-       
-      
-
-    }
     private void OnMouseEnter()
     {
-        Outline.SetFloat("_LampSwitch", 1);
     }
     private void OnMouseOver()
     {
@@ -37,31 +29,33 @@ public class LampSwitch : MonoBehaviour
             {
                 m_switch = false;
             }
+
+            if (m_switch == true)
+            {
+                moveLampBack();
+            }
+            else if (m_switch == false)
+            {
+                moveLampForward();
+            }
         }
 
-        if (m_switch == true)
-        {
-            moveLampBack();
-        }
-        else if (m_switch == false)
-        {
-            moveLampForward();
-        }
+        
         //Outline.SetFloat;
     }
 
     private void moveLampBack()
     {
-        transform.position = new Vector3(2.34f, -0.86f, 1.0f);
+        transform.Translate(0, 0, -0.11f);
     }
 
     private void moveLampForward()
     {
-        transform.position = new Vector3(2.34f, -0.86f, -0.11f);
+        transform.Translate(0, 0, 0.11f);
     }
 
     private void OnMouseExit()
     {
-        Outline.SetFloat("_IsMouseHovering", 0);
+
     }
 }
