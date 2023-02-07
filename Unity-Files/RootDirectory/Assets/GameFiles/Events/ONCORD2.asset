@@ -14,29 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   author: BossMan97
   date: 2/5/2025 | 12:21PM
-  message: '
-
-    Hey man,
-
-
-    I think i saw steph listening to some pretty bad
-    music
-
-
-    when i went past her room, can you delete it? It''s not
-
-
-    because
-    it''s a bad song, i think she just might be too
-
-
-    ... distracted. Thanks!
-
-
-
-    Oh
-    yeah btw, the song is call part3ytyme... i think'
-  lineBreaks: 13
+  message: "\nHey man,\n\nI think i saw steph listening to \n\nsome pretty bad music\n\nwhen
+    i went past her room, \n\ncan you delete it? It's not\n\nbecause it's a bad song,
+    \n\ni think she just might be too\n\n... distracted. Thanks!\n\n\nOh yeah btw,
+    the song is call part3ytyme... i think"
+  lineBreaks: 18
   eventNumber: 2
   command: DEL
   location: {fileID: 11400000, guid: 359972672b834f640a4f007947cae9b7, type: 2}

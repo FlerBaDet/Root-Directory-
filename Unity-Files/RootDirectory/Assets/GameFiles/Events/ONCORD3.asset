@@ -14,31 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   author: BossMan97
   date: 2/5/2025 | 1:12PM
-  message: '
-
-    Great job man! Do a couple more of these monkey brain
-
-
-    tasks
-    and you might just be on your way for another
-
-
-    promotion hahaha... anyways,
-    i saw sarah looking at
-
-
-    some memes earlier, can you get rid of any memes
-
-
-    on
-    her computer? Thxs.
-
-
-
-    PS. Don''t go into Geralds files, he''s all good
-
-'
-  lineBreaks: 13
+  message: "\nGreat job man! Do a couple more \n\nof these monkey brain\n\ntasks
+    and you might just be \n\non your way for another\n\npromotion hahaha... anyways,
+    \n\ni saw sarah looking at\n\nsome memes earlier, can you \n\nget rid of any
+    memes\n\non her computer? Thxs.\n\n\nPS. Don't go into Geralds files, he's all
+    good\n"
+  lineBreaks: 20
   eventNumber: 3
   command: DEL
   location: {fileID: 11400000, guid: 9cdb0cf5511a4ea4ca3f58a68c23026a, type: 2}

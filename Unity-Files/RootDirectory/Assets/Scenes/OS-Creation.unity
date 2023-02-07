@@ -134,6 +134,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sod-OS
       objectReference: {fileID: 0}
+    - target: {fileID: 3088789114225401982, guid: 9d6b285f27491c84195fca778b22a17c, type: 3}
+      propertyPath: imageTransRate
+      value: 210
+      objectReference: {fileID: 0}
     - target: {fileID: 3088789114341289897, guid: 9d6b285f27491c84195fca778b22a17c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2553

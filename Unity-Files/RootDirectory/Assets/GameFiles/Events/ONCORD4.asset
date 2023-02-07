@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa9f1b7949130274ba1f163f17144a9e, type: 3}
   m_Name: ONCORD4
   m_EditorClassIdentifier: 
-  author: BossMan97
+  author: SarahBarah
   date: 2/5/2025 | 4:47PM
-  message: "\nuhhhhh... i don't know what the boss has been telling you to do\n\nbut
-    people are getting fired and are losing work... i saw steph\n\ncrying her eyes
-    out, i don't think she's okay, i heard she's \n\ngoing through a lot right now...\n\n\nQuick,
-    before someone else gets fired, we need to do \n\nsomethiing about the boss...
-    Here, go into Geralds files\n\ni heard he keeps the admin password in his files,
-    go log in\n\nas admin and get me the bosses tax return! Yeah that'll \n\nwork...
-    We'll get him like AlCapowned...\n\nPs. put it in my work folder"
-  lineBreaks: 20
+  message: "\nuhhhhh... i don't know what the boss \n\nhas been telling you to do\n\nbut
+    people are getting fired and \n\nare losing work... i saw steph\n\ncrying her
+    eyes out, i don't think\n\nshe's okay, i heard she's \n\ngoing through a lot
+    right now...\n\n\nQuick, before someone else \n\ngets fired, we need to do \n\nsomethiing
+    about the boss... \n\nHere, go into Geralds files\n\ni heard he keeps the admin
+    \n\npassword in his files, go log in\n\nas admin and get me the bosses\n\ntax
+    return! Yeah that'll \n\nwork... We'll get him all like \n\nAlCapowned...\n\nPs.
+    put it in my work folder"
+  lineBreaks: 35
   eventNumber: 7
   command: PST
   location: {fileID: 11400000, guid: 5615558cae9de214ea988f124e38e2e5, type: 2}

@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   author: BossMan97
   date: 2/5/2025 | 4:32PM
-  message: "\nNice, that should take care of him... i mean give him a hand\n\n\n...
-    we're buddies right? um... i need a hand, so Steph has been\n\na real... yknow,
-    i would take this up with HR but it's a matter...\n\nthey would not appriciate...
-    so lets get around this\n\nbeurocracy... berocoracy? anyway please go and \n\ndelete
-    steph's work file in her documents for me?\n\nshe uh, did them wrong... Thanks."
-  lineBreaks: 14
+  message: "\nNice, that should take care of him... \n\ni mean give him a hand\n\n...
+    we're buddies right? um... i need a \n\nhand, so Steph has been\n\na real...
+    yknow, i would take this up \n\nwith HR but it's a matter...\n\nthey would not
+    appriciate... \n\nso lets get around this\n\nbeurocracy... berocoracy? \n\nanyway
+    please go and \n\ndelete steph's work file in her \n\ndocuments for me?\n\nshe
+    uh, did them wrong... Thanks."
+  lineBreaks: 25
   eventNumber: 6
   command: DEL
   location: {fileID: 11400000, guid: 1616c50ab5e151241aef2f679d34199b, type: 2}

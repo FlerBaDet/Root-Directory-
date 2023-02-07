@@ -16,5 +16,11 @@ MonoBehaviour:
   path: root/boss
   keyword: boss
   previousDirectory: {fileID: 11400000, guid: fe99cf97758f1d943a91efbf5c2e2068, type: 2}
-  paths: []
+  paths:
+  - keyString: boring
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 8b71a3e26285a634a9e2db770095e31c, type: 2}
+  - keyString: not boring
+    pathDesc: 
+    nextDirectory: {fileID: 11400000, guid: 501ee7df7118db140899ac9d1e0fe851, type: 2}
   files: []

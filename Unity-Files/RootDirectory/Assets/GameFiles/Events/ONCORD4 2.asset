@@ -15,10 +15,10 @@ MonoBehaviour:
   author: BossMan97
   date: 2/5/2025 | 3:47PM
   message: "\nYo, dis the boss. Yo Boss....\n\n\nOkay but seriously, uhh. i need
-    you to grab a file\n\nfrom Geralds, should be called \"work\" and i need\n\nyou
-    to plant... i mean place it into carlos's files...\n\nthanks.... \n\nPs. Place
-    it into his mydocuments folder"
-  lineBreaks: 11
+    \n\nyou to grab a file\n\nfrom Geralds, should be called \n\n\"work\" and i need\n\nyou
+    to plant... i mean place it \n\ninto carlos's files...\n\nthanks.... \n\nPs.
+    Place it into his mydocuments folder"
+  lineBreaks: 18
   eventNumber: 5
   command: PST
   location: {fileID: 11400000, guid: 2dbaeeb6b92ce7843b13c894e18e2f35, type: 2}

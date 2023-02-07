@@ -14,34 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   author: SarahBarah
   date: 2/5/2025 | 3:16PM
-  message: '
-
-    Hi, you''re the new guy right?
-
-
-
-    I''m Sarah. uh... did you
-    delete my meme? Listen,
-
-
-    I know the boss can be an ass sometimes, i don''t
-
-
-    like
-    him too much, i think he has some bad intentions
-
-
-    ... Would you be able
-    to go and get me a meme from
-
-
-    steph''s files? i would be eternally greateful
-    :) thanks!
-
-
-
-    Ps. you can put it into my memes folder'
-  lineBreaks: 10
+  message: "\nHi, you're the new guy right?\n\n\nI'm Sarah. uh... did you delete
+    \n\nmy meme? Listen,\n\nI know the boss can be an ass \n\nsometimes, i don't\n\nlike
+    him too much, i think he \n\nhas some bad intentions\n\n... Would you be able
+    to go and \n\nget me a meme from\n\nsteph's files? i would be eternally \n\ngreateful
+    :) thanks!\n\n\nPs. you can put it into my memes folder"
+  lineBreaks: 22
   eventNumber: 4
   command: PST
   location: {fileID: 11400000, guid: 9cdb0cf5511a4ea4ca3f58a68c23026a, type: 2}
